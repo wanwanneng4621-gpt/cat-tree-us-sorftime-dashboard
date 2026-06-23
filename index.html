@@ -97,6 +97,24 @@
     .metric { border: 1px solid var(--line); background: #fff; border-radius: 18px; padding: 16px; min-height: 128px; }
     .metric b { display: block; font-size: 28px; letter-spacing: -.035em; margin-bottom: 8px; }
     .metric span { color: var(--muted); line-height: 1.45; font-size: 13px; }
+    .competitor-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .competitor-card { display: grid; grid-template-rows: 190px 1fr; color: inherit; text-decoration: none; border: 1px solid var(--line); background: #fff; border-radius: 18px; overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
+    .competitor-card:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(47, 40, 28, .12); text-decoration: none; }
+    .competitor-img { display: grid; place-items: center; background: linear-gradient(180deg, #fff 0%, #f8f2e8 100%); padding: 12px; }
+    .competitor-img img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; mix-blend-mode: multiply; }
+    .competitor-body { padding: 13px; }
+    .competitor-rank { color: var(--accent); font-size: 12px; font-weight: 950; margin-bottom: 6px; }
+    .competitor-body h3 { margin: 0 0 7px; font-size: 13px; line-height: 1.35; min-height: 52px; }
+    .competitor-body p { margin: 0 0 8px; color: var(--muted); font-size: 12px; line-height: 1.45; }
+    .competitor-body em { display: block; color: var(--primary); font-size: 12px; font-style: normal; font-weight: 900; margin-top: 8px; }
+    .mini-stats { display: flex; flex-wrap: wrap; gap: 6px; }
+    .mini-stats span { border-radius: 999px; background: #f4eadb; color: #5b4a35; padding: 5px 7px; font-size: 11px; font-weight: 900; }
+    .concept-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .concept-card { border: 1px solid var(--line); background: #fff; border-radius: 18px; overflow: hidden; }
+    .concept-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #f4eadb; }
+    .concept-copy { padding: 15px; }
+    .concept-copy h3 { margin: 10px 0 7px; font-size: 16px; }
+    .concept-copy p { margin: 0; color: var(--muted); line-height: 1.62; font-size: 13px; }
     .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .badge { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 7px 10px; font-size: 12px; font-weight: 850; color: var(--muted); }
     .callout { border-left: 5px solid var(--primary); background: rgba(36,107,93,.08); padding: 15px 16px; border-radius: 16px; line-height: 1.72; }
@@ -144,12 +162,14 @@
       .hero, .grid, .two-col { display: block; }
       .card, .hero-main, .side-card { margin-bottom: 14px; }
       .metric-grid, .downloads { grid-template-columns: repeat(2, 1fr); }
+      .competitor-grid, .concept-grid { grid-template-columns: repeat(2, 1fr); }
       .ledger-row { grid-template-columns: 1fr; }
     }
     @media (max-width: 620px) {
       .wrap { padding: 18px 12px 48px; }
       .hero-main { padding: 24px; }
       .metric-grid, .downloads { grid-template-columns: 1fr; }
+      .competitor-grid, .concept-grid { grid-template-columns: 1fr; }
       .opportunity { grid-template-columns: 1fr; }
       .rank-top { display: block; }
       table { min-width: 860px; }
@@ -195,6 +215,183 @@
           <div class="metric"><b>$38-$39.99</b><span>销量最高的2美金价格阶梯，销量占比 16.45%</span></div>
           <div class="metric"><b>54.18%</b><span>$30-50 商品在Top100中的月销量占比</span></div>
           <div class="metric"><b>52.27%</b><span>4.5星及以上商品在Top100中的月销量占比</span></div>
+        </div>
+      </div>
+
+      <div class="card span-12">
+        <p class="section-kicker">Competitor Visuals</p>
+        <h2 class="section-title">Amazon Top10 竞品主图与链接</h2>
+        <p class="muted">下列竞品图片来自 Sorftime `product_detail` 返回的 Amazon 主图字段，点击卡片可打开对应 Amazon ASIN 链接。图片用于竞品视觉结构复核，不代表本项目产品方案。</p>
+        <div class="competitor-grid">
+        <a class="competitor-card" href="https://www.amazon.com/dp/B0D2HMV3S6" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/41GZdo6rzaL.jpg" alt="FDW B0D2HMV3S6 product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#1 · FDW</div>
+            <h3>FDW 54 inch Cat Tree Tower, Dark Gray, multi-level indoor activity center</h3>
+            <p>19 L x 19 W x 54 H in</p>
+            <div class="mini-stats">
+              <span>$38.99</span>
+              <span>4.1星</span>
+              <span>6,953评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
+        
+        <a class="competitor-card" href="https://www.amazon.com/dp/B07V4SGDDZ" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/41P67vQqEDL.jpg" alt="Yaheetech B07V4SGDDZ product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#2 · Yaheetech</div>
+            <h3>Yaheetech 63in Large Cat Tree for Heavy Cats up to 22lbs</h3>
+            <p>30.5 L x 19 W x 63 H in</p>
+            <div class="mini-stats">
+              <span>$49.97</span>
+              <span>4.7星</span>
+              <span>7,844评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
+        
+        <a class="competitor-card" href="https://www.amazon.com/dp/B0B7RQTSB7" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/71N99J8RxoL.jpg" alt="Heybly B0B7RQTSB7 product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#3 · Heybly</div>
+            <h3>Heybly Cat Tree with Toy, condo, perch, hammock and sisal posts</h3>
+            <p>17.32 L x 12.6 W x 43.3 H in</p>
+            <div class="mini-stats">
+              <span>$35.98</span>
+              <span>4.2星</span>
+              <span>11,412评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
+        
+        <a class="competitor-card" href="https://www.amazon.com/dp/B0DGKR5MMP" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/41q5XA1Ax4L.jpg" alt="Globlazer B0DGKR5MMP product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#4 · Globlazer</div>
+            <h3>Globlazer Heavy Duty 70 inch Cat Tree for large indoor cats</h3>
+            <p>21.65 L x 17.7 W x 70.08 H in</p>
+            <div class="mini-stats">
+              <span>$89.99</span>
+              <span>4.7星</span>
+              <span>1,254评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
+        
+        <a class="competitor-card" href="https://www.amazon.com/dp/B0G2XYGPWY" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/41ybdtS0bgL.jpg" alt="Sweetcrispy B0G2XYGPWY product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#5 · Sweetcrispy</div>
+            <h3>Sweetcrispy 44 Inch Cat Tree Tower with natural sisal posts, hammock and condo</h3>
+            <p>17.72 L x 13.78 W x 44.49 H in</p>
+            <div class="mini-stats">
+              <span>$29.92</span>
+              <span>4.4星</span>
+              <span>255评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
+        
+        <a class="competitor-card" href="https://www.amazon.com/dp/B0CNSWH1SQ" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/81fqW24NzbL.jpg" alt="TWDEPART B0CNSWH1SQ product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#6 · TWDEPART</div>
+            <h3>TWDEPART Cat Tree Tower with cat scratching post and playful toy balls</h3>
+            <p>16.93 L x 13 W x 17.7 H in</p>
+            <div class="mini-stats">
+              <span>$19.75</span>
+              <span>4.4星</span>
+              <span>3,545评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
+        
+        <a class="competitor-card" href="https://www.amazon.com/dp/B0794T79KM" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/41l3oRMO-+L.jpg" alt="Yaheetech B0794T79KM product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#7 · Yaheetech</div>
+            <h3>Yaheetech 54in Cat Tree, multi-level tower with caves and perches</h3>
+            <p>19.5 L x 19.5 W x 54 H in</p>
+            <div class="mini-stats">
+              <span>$39.98</span>
+              <span>4.5星</span>
+              <span>39,950评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
+        
+        <a class="competitor-card" href="https://www.amazon.com/dp/B0GMX4ZVK1" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/41YDP0HmH0L.jpg" alt="Sweetcrispy B0GMX4ZVK1 product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#8 · Sweetcrispy</div>
+            <h3>Sweetcrispy 54 Inch Cat Tree Tower, multi-level indoor condo, pink</h3>
+            <p>20 L x 20 W x 54 H in</p>
+            <div class="mini-stats">
+              <span>$37.94</span>
+              <span>4.4星</span>
+              <span>1,118评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
+        
+        <a class="competitor-card" href="https://www.amazon.com/dp/B0BR561TK3" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/415J7xBSypL.jpg" alt="Feandrea B0BR561TK3 product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#9 · Feandrea</div>
+            <h3>Feandrea 59.5 inch plush multi-level cat tower with caves, hammock and perches</h3>
+            <p>19.3 L x 15.7 W x 59.5 H in</p>
+            <div class="mini-stats">
+              <span>$47.69</span>
+              <span>4.4星</span>
+              <span>12,399评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
+        
+        <a class="competitor-card" href="https://www.amazon.com/dp/B0CNX5VJS4" target="_blank" rel="noopener">
+          <div class="competitor-img">
+            <img src="https://m.media-amazon.com/images/I/81X3z6rK23L.jpg" alt="AIWIKIDE B0CNX5VJS4 product image" loading="lazy" />
+          </div>
+          <div class="competitor-body">
+            <div class="competitor-rank">#10 · AIWIKIDE</div>
+            <h3>AIWIKIDE 37.4 inch cactus cat tree tower with twin condos and hammock</h3>
+            <p>24.4 L x 12.2 W x 37.4 H in</p>
+            <div class="mini-stats">
+              <span>$34.84</span>
+              <span>4.3星</span>
+              <span>17,239评</span>
+            </div>
+            <em>点击打开 Amazon 竞品链接</em>
+          </div>
+        </a>
         </div>
       </div>
 
@@ -398,6 +595,49 @@
             </ul>
           </div>
         </div>
+      </div>
+
+      <div class="card span-12">
+        <p class="section-kicker">Concept Images</p>
+        <h2 class="section-title">项目部建议开发方向 Demo 图</h2>
+        <p class="muted">以下图片为 gpt-image-2 生成的产品开发参考图，不是竞品实拍，也不是最终生产图。用途是把选品方向转成可讨论的结构、外观、场景和供应商沟通素材。</p>
+        <div class="concept-grid">
+            <article class="concept-card">
+              <img src="assets/concepts/cat-tree-concept-mainstream-44-54in.png" alt="44-54英寸公寓主流款 Demo" loading="lazy" />
+              <div class="concept-copy">
+                <span class="badge">首推方向</span>
+                <h3>44-54英寸公寓主流款 Demo</h3>
+                <p>适合美国公寓、小户型客厅和窗边空间；重点验证宽底座、猫窝、吊床、双平台与墙面防倾倒带。</p>
+              </div>
+            </article>
+            
+            <article class="concept-card">
+              <img src="assets/concepts/cat-tree-concept-heavy-duty-60-70in.png" alt="60-70英寸大猫加强款 Demo" loading="lazy" />
+              <div class="concept-copy">
+                <span class="badge">第二梯队</span>
+                <h3>60-70英寸大猫加强款 Demo</h3>
+                <p>面向多猫/大猫家庭；重点验证加大平台、粗抓柱、加宽底座、承重和包装体积。</p>
+              </div>
+            </article>
+            
+            <article class="concept-card">
+              <img src="assets/concepts/cat-tree-concept-exploded-structure.png" alt="模块化结构爆炸图" loading="lazy" />
+              <div class="concept-copy">
+                <span class="badge">供应商沟通</span>
+                <h3>模块化结构爆炸图</h3>
+                <p>用于向供应商说明底板、抓柱、猫窝、吊床、防倾倒带、五金和可替换抓柱套的结构方向。</p>
+              </div>
+            </article>
+            
+            <article class="concept-card">
+              <img src="assets/concepts/cat-tree-concept-us-apartment-scene.png" alt="美国公寓场景图" loading="lazy" />
+              <div class="concept-copy">
+                <span class="badge">Listing场景</span>
+                <h3>美国公寓场景图</h3>
+                <p>用于主图组/详情页场景表达：窗边、公寓客厅、浅色家居、多猫互动和占地感。</p>
+              </div>
+            </article>
+            </div>
       </div>
 
       <div class="card span-12">
