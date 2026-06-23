@@ -1,0 +1,62 @@
+{
+  "captured_at_beijing": "2026-06-23 19:08:31",
+  "product_line": "cat tree",
+  "marketplace": "US",
+  "source": "Sorftime MCP live calls in Codex",
+  "amazon_keywords": [
+    {
+      "keyword": "cat tree",
+      "weekly_search_volume": 209095,
+      "weekly_rank": 246,
+      "monthly_search_volume": 825293,
+      "recommended_cpc_usd": 0.82,
+      "seasonality": "均衡",
+      "competitor_count": 127472,
+      "top5_products": [
+        {"asin": "B0FB94XZKK", "title": "FUKUMARU Cat Scratcher", "price_usd": 19.79, "monthly_sales": 17903, "brand": "FUKUMARU", "seller": "FUKUMARU", "type": "cat scratcher"},
+        {"asin": "B00DT2WL26", "title": "Catstages Tower of Tracks Cat Toy", "price_usd": 8.79, "monthly_sales": 12732, "brand": "Catstages", "seller": "Amazon", "type": "cat toy"},
+        {"asin": "B0D4VDDQV3", "title": "EHEYCIGA Cardboard Cat Scratcher", "price_usd": 18.98, "monthly_sales": 9942, "brand": "EHEYCIGA", "seller": "Emoh US", "type": "cat scratcher"},
+        {"asin": "B07G3GVBV7", "title": "Amazon Basics Cat Scratching Post", "price_usd": 19.94, "monthly_sales": 9704, "brand": "Amazon Basics", "seller": "Amazon", "type": "scratching post"},
+        {"asin": "B0D2HMKGRF", "title": "FDW 54 inch Cat Tree Tower", "price_usd": 49.99, "monthly_sales": 8648, "brand": "FDW", "seller": "Amazon", "type": "full cat tree"}
+      ]
+    },
+    {
+      "keyword": "cat tree tower",
+      "weekly_search_volume": 26636,
+      "weekly_rank": 12701,
+      "monthly_search_volume": 127790,
+      "recommended_cpc_usd": 0.74,
+      "seasonality": "10月, 11月, 12月",
+      "competitor_count": 15664
+    },
+    {
+      "keyword": "cat tree for large cats",
+      "weekly_search_volume": 6339,
+      "weekly_rank": 101629,
+      "monthly_search_volume": 26889,
+      "recommended_cpc_usd": 0.92,
+      "seasonality": "9月",
+      "competitor_count": 132476
+    }
+  ],
+  "walmart_keywords": [
+    {"keyword": "cat tree", "update": "20260617", "search_volume": 225965, "product_count": 14071, "avg_price_usd": 41.04, "avg_reviews": 1104.9, "avg_star": 4.38},
+    {"keyword": "cat tree tower", "update": "20260617", "search_volume": 34989, "product_count": 4565, "avg_price_usd": 41.55, "avg_reviews": 1231.83, "avg_star": 4.44},
+    {"keyword": "cat tree for large cats", "update": "20260617", "search_volume": 7362, "product_count": 1653, "avg_price_usd": 67.47, "avg_reviews": 703.5, "avg_star": 4.12},
+    {"keyword": "cat condo", "update": "20260617", "search_volume": 9377, "product_count": 4432, "avg_price_usd": 29.2, "avg_reviews": 861.75, "avg_star": 4.28},
+    {"keyword": "cute cat tree", "update": "20260617", "search_volume": 7855, "product_count": 6537, "avg_price_usd": 46.02, "avg_reviews": 799.08, "avg_star": 4.08}
+  ],
+  "temu_products": [
+    {"product_id": "603247834155168", "name": "44-Inch Multi-Cat Tree Tower with Condo & Hammock", "store": "ChoiceGoods4Less", "brand": "IDLE WAY", "price_usd": 24.48, "monthly_sales": 5000, "monthly_sales_amount_usd": 122400.0, "reviews": 4863, "star": 4.8},
+    {"product_id": "601103756577237", "name": "44-Inch Multi-Cat Tree Tower with Condo & Hammock", "store": "WonderHome Oasis", "brand": "OLIXIS", "price_usd": 24.23, "monthly_sales": 2000, "monthly_sales_amount_usd": 48460.0, "reviews": 2795, "star": 4.8},
+    {"product_id": "601105733259052", "name": "66in/44in Multi-Level Cat Condo Tower", "store": "LEDREM K", "brand": "LEDREM", "price_usd": 33.9, "monthly_sales": 1017, "monthly_sales_amount_usd": 34476.3, "reviews": 422, "star": 4.7},
+    {"product_id": "601102878054691", "name": "Large Durable Jute Scratching Board", "store": "PUHUO", "brand": "SWEETCRISPY", "price_usd": 17.55, "monthly_sales": 3000, "monthly_sales_amount_usd": 52650.0, "reviews": 339, "star": 4.7},
+    {"product_id": "601102989493260", "name": "3pcs Wooden Cat Wall-Mounted Floating Steps", "store": "WoodsArtisan", "brand": "TSCOMON", "price_usd": 26.8, "monthly_sales": 720, "monthly_sales_amount_usd": 19296.0, "reviews": 8, "star": 3.5}
+  ],
+  "linkfoxskill_status": {
+    "linkfox-amazon-reviews": "installed; blocked by missing LINKFOXAGENT_API_KEY",
+    "linkfox-ruiguan-image-compliance": "installed; blocked by missing LINKFOXAGENT_API_KEY",
+    "linkfox-amazon-store-report": "installed; blocked by missing linkfox-amazon-store-auth and seller authorization",
+    "tiktok": "not refreshed; current Sorftime MCP tools did not expose TikTok category/search refresh endpoint or verified product ids"
+  }
+}
