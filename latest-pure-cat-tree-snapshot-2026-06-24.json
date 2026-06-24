@@ -1,0 +1,325 @@
+{
+  "captured_at_beijing": "2026-06-24 09:28:25",
+  "scope_rule": {
+    "included": [
+      "free-standing cat tree",
+      "cat tower",
+      "multi-level cat condo tower",
+      "floor-to-ceiling cat tree"
+    ],
+    "excluded": [
+      "standalone cat scratcher",
+      "standalone scratching post",
+      "cat toy",
+      "pet bed",
+      "wall-mounted cat shelf or step kit"
+    ],
+    "note": "Scratching posts and pads are counted only when they are components of a complete cat tree."
+  },
+  "amazon": {
+    "source": "Sorftime MCP category_report and keyword_detail",
+    "node_id": "2975248011",
+    "live_category_raw": {
+      "monthly_sales": 133229,
+      "monthly_revenue_usd": 6454596.14,
+      "top3_product_sales_share_pct": 15.24,
+      "top3_brand_sales_share_pct": 28.79,
+      "amazon_owned_sales_share_pct": 31.91,
+      "sales_share_reviews_1000_plus_pct": 69.04,
+      "sales_share_reviews_below_300_pct": 12.36,
+      "warning": "The provider category feed still contains some wall-mounted cat furniture. Use as a live market signal, not as a pure Cat Tree exact total."
+    },
+    "auditable_clean_detail_snapshot": {
+      "captured_at_beijing": "2026-06-23 19:08:31",
+      "raw_rows": 100,
+      "clean_cat_tree_rows": 98,
+      "excluded_rows": 2,
+      "monthly_sales": 130293,
+      "monthly_revenue_usd": 6828164.70,
+      "excluded_asins": [
+        "B0DRVMY62Y",
+        "B0BTYDDKSP"
+      ]
+    },
+    "keywords": [
+      {
+        "keyword": "cat tree",
+        "monthly_search_volume": 825293,
+        "weekly_search_volume": 209095,
+        "recommended_cpc_usd": 0.82,
+        "competitor_count": 127472,
+        "seasonality": "均衡",
+        "warning": "Search results contain standalone scratchers, posts and toys. Do not use keyword-result product totals as a pure Cat Tree market total."
+      },
+      {
+        "keyword": "cat tree tower",
+        "monthly_search_volume": 127790,
+        "weekly_search_volume": 26636,
+        "recommended_cpc_usd": 0.74,
+        "competitor_count": 15664,
+        "seasonality": "10月、11月、12月"
+      },
+      {
+        "keyword": "cat tree for large cats",
+        "monthly_search_volume": 26889,
+        "weekly_search_volume": 6339,
+        "recommended_cpc_usd": 0.92,
+        "competitor_count": 132476,
+        "seasonality": "9月",
+        "warning": "Search-result competitor count is noisy and inconsistent with the long-tail intent. Use the keyword volume and CPC as directional signals."
+      }
+    ],
+    "live_top_products": [
+      {
+        "asin": "B0D2HMV3S6",
+        "brand": "FDW",
+        "title": "FDW 54' Cat Tree Tower",
+        "price_usd": 38.99,
+        "monthly_sales": 9063,
+        "monthly_revenue_usd": 353366.37,
+        "rating": 4.1,
+        "reviews": 6960
+      },
+      {
+        "asin": "B0GMX4ZVK1",
+        "brand": "Sweetcrispy",
+        "title": "Sweetcrispy 54 Inch Cats Tree Tower, Pink",
+        "price_usd": 37.94,
+        "monthly_sales": 5679,
+        "monthly_revenue_usd": 215461.26,
+        "rating": 4.4,
+        "reviews": 1121
+      },
+      {
+        "asin": "B0G2XTWMYG",
+        "brand": "Sweetcrispy",
+        "title": "Sweetcrispy 44 Inch Cat Tree Tower, Dark Grey",
+        "price_usd": 34.92,
+        "monthly_sales": 5566,
+        "monthly_revenue_usd": 194364.72,
+        "rating": 4.3,
+        "reviews": 27
+      },
+      {
+        "asin": "B0B7RPWFND",
+        "brand": "Heybly",
+        "title": "Heybly Cat Tree with Condo, Perch and Hammock",
+        "price_usd": 35.98,
+        "monthly_sales": 5022,
+        "monthly_revenue_usd": 180691.56,
+        "rating": 4.2,
+        "reviews": 11413
+      },
+      {
+        "asin": "B0794T79KM",
+        "brand": "Yaheetech",
+        "title": "Yaheetech 54in Multi-Level Cat Tree",
+        "price_usd": 39.98,
+        "monthly_sales": 4889,
+        "monthly_revenue_usd": 195462.22,
+        "rating": 4.5,
+        "reviews": 39953
+      },
+      {
+        "asin": "B07V4SGDDZ",
+        "brand": "Yaheetech",
+        "title": "Yaheetech 63in Large Cat Tree for Heavy Cats",
+        "price_usd": 49.97,
+        "monthly_sales": 4888,
+        "monthly_revenue_usd": 244253.36,
+        "rating": 4.7,
+        "reviews": 7849
+      },
+      {
+        "asin": "B0DGKR5MMP",
+        "brand": "Globlazer",
+        "title": "Globlazer Heavy Duty 70 inch Cat Tree",
+        "price_usd": 89.99,
+        "monthly_sales": 4648,
+        "monthly_revenue_usd": 418273.52,
+        "rating": 4.7,
+        "reviews": 1258
+      },
+      {
+        "asin": "B0CNSWH1SQ",
+        "brand": "TWDEPART",
+        "title": "Cat Tree Tower with Scratching Post, Grey",
+        "price_usd": 19.75,
+        "monthly_sales": 4293,
+        "monthly_revenue_usd": 84786.75,
+        "rating": 4.4,
+        "reviews": 3550
+      },
+      {
+        "asin": "B084YZWS2C",
+        "brand": "YUNIQUE",
+        "title": "YUNIQUE Cat Tree with Condo and Big Hammock",
+        "price_usd": 32.29,
+        "monthly_sales": 4182,
+        "monthly_revenue_usd": 135036.78,
+        "rating": 4.2,
+        "reviews": 7588
+      },
+      {
+        "asin": "B0BR561TK3",
+        "brand": "Feandrea",
+        "title": "Feandrea 59.5-Inch Cat Tree",
+        "price_usd": 47.69,
+        "monthly_sales": 3756,
+        "monthly_revenue_usd": 179123.64,
+        "rating": 4.4,
+        "reviews": 12401
+      }
+    ]
+  },
+  "walmart": {
+    "source": "Sorftime snapshot captured 2026-06-17",
+    "sample": "40 complete Cat Tree listings",
+    "monthly_sales": 16647,
+    "monthly_revenue_usd": 870536.43,
+    "keywords": [
+      {
+        "keyword": "cat tree",
+        "search_volume": 225965,
+        "product_count": 14071,
+        "avg_price_usd": 41.04,
+        "avg_reviews": 1104.9,
+        "avg_star": 4.38
+      },
+      {
+        "keyword": "cat tree tower",
+        "search_volume": 34989,
+        "product_count": 4565,
+        "avg_price_usd": 41.55,
+        "avg_reviews": 1231.83,
+        "avg_star": 4.44
+      },
+      {
+        "keyword": "cat tree for large cats",
+        "search_volume": 7362,
+        "product_count": 1653,
+        "avg_price_usd": 67.47,
+        "avg_reviews": 703.5,
+        "avg_star": 4.12
+      },
+      {
+        "keyword": "cat condo",
+        "search_volume": 9377,
+        "product_count": 4432,
+        "avg_price_usd": 29.2,
+        "avg_reviews": 861.75,
+        "avg_star": 4.28
+      },
+      {
+        "keyword": "cute cat tree",
+        "search_volume": 7855,
+        "product_count": 6537,
+        "avg_price_usd": 46.02,
+        "avg_reviews": 799.08,
+        "avg_star": 4.08
+      }
+    ]
+  },
+  "temu": {
+    "source": "Sorftime MCP product detail, refreshed 2026-06-24",
+    "sample": "8 ProductIds manually verified as complete Cat Tree products",
+    "monthly_sales": 9401,
+    "monthly_revenue_usd": 246252.62,
+    "weighted_transaction_price_usd": 26.19,
+    "products": [
+      {
+        "product_id": "603247834155168",
+        "name": "44-Inch Multi-Cat Tree Tower with Condo & Hammock",
+        "store": "ChoiceGoods4Less",
+        "brand": "IDLE WAY",
+        "price_usd": 24.48,
+        "monthly_sales": 5000,
+        "monthly_revenue_usd": 122400,
+        "reviews": 4863,
+        "rating": 4.8
+      },
+      {
+        "product_id": "601103756577237",
+        "name": "44-Inch Multi-Cat Tree Tower with Condo & Hammock",
+        "store": "WonderHome Oasis",
+        "brand": "OLIXIS",
+        "price_usd": 24.23,
+        "monthly_sales": 2000,
+        "monthly_revenue_usd": 48460,
+        "reviews": 2795,
+        "rating": 4.8
+      },
+      {
+        "product_id": "601105733259052",
+        "name": "66in/44in Multi-Level Cat Condo Tower",
+        "store": "LEDREM K",
+        "brand": "LEDREM",
+        "price_usd": 33.9,
+        "monthly_sales": 1017,
+        "monthly_revenue_usd": 34476.3,
+        "reviews": 422,
+        "rating": 4.7
+      },
+      {
+        "product_id": "601101658056158",
+        "name": "Multi-Level Cat Tree Tower with Cat Beds and Cat House",
+        "store": "Rong Wan Home",
+        "brand": "ENHOMEE",
+        "price_usd": 24.99,
+        "monthly_sales": 300,
+        "monthly_revenue_usd": 7497,
+        "reviews": 1153,
+        "rating": 4.4
+      },
+      {
+        "product_id": "601099652712161",
+        "name": "ClevaHome Deep Denim Cat Tree, 32 Inches",
+        "store": "Cleva",
+        "brand": "CLEVA",
+        "price_usd": 21.98,
+        "monthly_sales": 434,
+        "monthly_revenue_usd": 9539.32,
+        "reviews": 1013,
+        "rating": 4.8
+      },
+      {
+        "product_id": "601099640397920",
+        "name": "59-Inch Multi-Level Cat Tower",
+        "store": "TSCOMON",
+        "brand": "TSCOMON",
+        "price_usd": 29.31,
+        "monthly_sales": 300,
+        "monthly_revenue_usd": 8793,
+        "reviews": 988,
+        "rating": 4.7
+      },
+      {
+        "product_id": "602603421326065",
+        "name": "Costoffs 57-Inch Cat Tree with 2 Condos",
+        "store": "Costoffs",
+        "brand": "COSTOFFS",
+        "price_usd": 45.42,
+        "monthly_sales": 200,
+        "monthly_revenue_usd": 9084,
+        "reviews": 558,
+        "rating": 4.8
+      },
+      {
+        "product_id": "601099585005276",
+        "name": "DOPINMIN 54in Cat Tree Tower",
+        "store": "DOPINMIN Official Shop",
+        "brand": "DOPINMIN",
+        "price_usd": 40.02,
+        "monthly_sales": 150,
+        "monthly_revenue_usd": 6003,
+        "reviews": 866,
+        "rating": 4.7
+      }
+    ]
+  },
+  "tiktok_shop": {
+    "status": "No reliable, cleaned, product-level Cat Tree sample in the current Sorftime toolset.",
+    "quantitative_use": false,
+    "allowed_use": "Platform audience and content-format hypothesis only. No Cat Tree market-size, sales or product-ranking claim."
+  }
+}
