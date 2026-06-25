@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-06-25T15:38:21+08:00",
+  "current_date": "2026-06-25",
+  "method": {
+    "normalization": "Each source is normalized to its calendar-year mean = 100 before month-of-year averaging.",
+    "combined_weight": {
+      "google_trends": 0.45,
+      "sorftime": 0.55
+    },
+    "peak_rule": "Combined index >= 110; otherwise the three highest months.",
+    "listing_window_rule": "8-12 weeks before the first day of the next peak month.",
+    "partial_periods": "Rows marked partial are excluded."
+  },
+  "included_periods": {
+    "google": [],
+    "sorftime": [
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ]
+  },
+  "google_qualitative": "Google Trends numeric series was blocked by HTTP 429 on 2026-06-25; public qualitative sources corroborate stronger year-end and winter interest.",
+  "confidence": "medium",
+  "primary_peak_month": 12,
+  "peak_months": [
+    12,
+    7,
+    11
+  ],
+  "monthly_indices": [
+    {
+      "month": 1,
+      "month_name": "January",
+      "google_index": null,
+      "sorftime_index": 100.9,
+      "combined_index": 100.9
+    },
+    {
+      "month": 2,
+      "month_name": "February",
+      "google_index": null,
+      "sorftime_index": 84.6,
+      "combined_index": 84.6
+    },
+    {
+      "month": 3,
+      "month_name": "March",
+      "google_index": null,
+      "sorftime_index": 95.8,
+      "combined_index": 95.8
+    },
+    {
+      "month": 4,
+      "month_name": "April",
+      "google_index": null,
+      "sorftime_index": 87.4,
+      "combined_index": 87.4
+    },
+    {
+      "month": 5,
+      "month_name": "May",
+      "google_index": null,
+      "sorftime_index": 91.5,
+      "combined_index": 91.5
+    },
+    {
+      "month": 6,
+      "month_name": "June",
+      "google_index": null,
+      "sorftime_index": 89.7,
+      "combined_index": 89.7
+    },
+    {
+      "month": 7,
+      "month_name": "July",
+      "google_index": null,
+      "sorftime_index": 116.7,
+      "combined_index": 116.7
+    },
+    {
+      "month": 8,
+      "month_name": "August",
+      "google_index": null,
+      "sorftime_index": 103.2,
+      "combined_index": 103.2
+    },
+    {
+      "month": 9,
+      "month_name": "September",
+      "google_index": null,
+      "sorftime_index": 94.0,
+      "combined_index": 94.0
+    },
+    {
+      "month": 10,
+      "month_name": "October",
+      "google_index": null,
+      "sorftime_index": 94.1,
+      "combined_index": 94.1
+    },
+    {
+      "month": 11,
+      "month_name": "November",
+      "google_index": null,
+      "sorftime_index": 113.4,
+      "combined_index": 113.4
+    },
+    {
+      "month": 12,
+      "month_name": "December",
+      "google_index": null,
+      "sorftime_index": 128.7,
+      "combined_index": 128.7
+    }
+  ],
+  "launch_calendar": [
+    {
+      "peak_month": 12,
+      "peak_month_name": "December",
+      "next_peak_start": "2026-12-01",
+      "best_listing_window": {
+        "start": "2026-09-08",
+        "end": "2026-10-06"
+      },
+      "inventory_ready_by": "2026-10-20"
+    },
+    {
+      "peak_month": 7,
+      "peak_month_name": "July",
+      "next_peak_start": "2027-07-01",
+      "best_listing_window": {
+        "start": "2027-04-08",
+        "end": "2027-05-06"
+      },
+      "inventory_ready_by": "2027-05-20"
+    },
+    {
+      "peak_month": 11,
+      "peak_month_name": "November",
+      "next_peak_start": "2026-11-01",
+      "best_listing_window": {
+        "start": "2026-08-09",
+        "end": "2026-09-06"
+      },
+      "inventory_ready_by": "2026-09-20"
+    }
+  ],
+  "best_listing_window": {
+    "start": "2026-09-08",
+    "end": "2026-10-06"
+  }
+}

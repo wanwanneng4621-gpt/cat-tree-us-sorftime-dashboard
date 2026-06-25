@@ -19,6 +19,7 @@ status: "final"
 - **首要方向是44-54英寸稳定型主流款，第二方向是60-72英寸大猫加强款。** 前者覆盖Amazon、Walmart与Temu的最大共同需求，后者承担Amazon高客单和Walmart大猫场景。
 - **不同平台不能用同一SKU、同一价格和同一页面打法硬推。** Amazon卖“证据与信任”，Walmart卖“家庭价值与交付便利”，Temu卖“低价完整功能”，TikTok Shop卖“真实演示与视觉内容”。
 - **美国用户最核心的不是高度，而是可用性。** 335条代表ASIN负评显示，尺寸/大猫适配、安装缺件、稳定安全、材料耐久和猫是否愿意使用，是必须优先解决的开发问题。
+- **季节性不是强单峰，但存在明确的7月与11—12月抬升。** Sorftime完整月份标准化指数显示12月128.7、7月116.7、11月113.4；2026年Q4主窗口应在8月上旬至10月上旬完成分批上架，净新结构若错过开发周期则转向2027年4—5月上架、承接7月次峰。
 
 ## 1. 分析边界与数据可信度
 
@@ -53,7 +54,53 @@ status: "final"
 - 两个44英寸完整 Cat Tree 的月销量分别为5,000和2,000，价格约$24，是目前最强的Temu方向证据。
 - 59-66英寸款存在成交，但销量明显低于44英寸核心款；首发不应押注75英寸以上超大件。
 
-## 3. 美国客户画像：按购买任务而非虚构人口比例划分
+## 3. 季节性与最佳上架时间
+
+### 数据事实
+
+- Sorftime `Cat Trees` 类目采用2024年6月至2026年5月共24个完整月份；2026年6月数据未完，已排除。
+- 为降低年度规模变化干扰，每个自然年先按“全年月均=100”归一化，再按月份跨年平均。
+- 主峰为12月，指数128.7；次峰为7月116.7和11月113.4。2月84.6、4月87.4、6月89.7相对偏弱。
+- Google Trends美国区 `cat tree / cat tower` 五年查询在2026年6月25日返回HTTP 429，因此本轮没有把Google数值序列加入综合指数。公开资料只用于定性佐证年末和冬季关注增强。
+- 置信度为 **medium（中等）**：Sorftime有24个完整月份，Google Trends仅有定性佐证，不能升级为高置信度。
+
+| 月份 | Sorftime标准化指数 | 判断 |
+|---|---:|---|
+| 1月 | 100.9 | 常态/淡季 |
+| 2月 | 84.6 | 常态/淡季 |
+| 3月 | 95.8 | 常态/淡季 |
+| 4月 | 87.4 | 常态/淡季 |
+| 5月 | 91.5 | 常态/淡季 |
+| 6月 | 89.7 | 常态/淡季 |
+| 7月 | 116.7 | 旺季 |
+| 8月 | 103.2 | 常态/淡季 |
+| 9月 | 94.0 | 常态/淡季 |
+| 10月 | 94.1 | 常态/淡季 |
+| 11月 | 113.4 | 旺季 |
+| 12月 | 128.7 | 旺季 |
+
+### 最佳上架与库存日历
+
+| 目标峰值 | 最佳上架窗口 | 库存就绪 | 峰值月份开始 |
+|---|---|---|---|
+| 12月 | 2026年9月8日—2026年10月6日 | 2026年10月20日 | 2026年12月1日 |
+| 7月 | 2027年4月8日—2027年5月6日 | 2027年5月20日 | 2027年7月1日 |
+| 11月 | 2026年8月9日—2026年9月6日 | 2026年9月20日 | 2026年11月1日 |
+
+### AI判断
+
+1. **2026年Q4主战役：**成熟结构的44—54英寸主流款、大猫加强款应在2026年8月上旬至10月上旬分批上架，先承接11月前置峰，再进入12月主峰。主链接不应等到11月才冷启动。
+2. **2027年暑期次峰：**净新结构、需要重新开模或重做包装的产品，建议2027年4月8日至5月6日上架，库存最晚2027年5月20日前就绪，承接7月次峰。
+3. **关键词差异：**Sorftime关键词季节字段显示 `cat tree tower` 更偏10—12月，`cat tree for large cats` 更偏9月；大猫款应在6—7月提前上架积累评论，普通主流款则重点准备Q4。
+4. **常青属性：**`cat tree` 主词被标记为均衡，说明全年都有需求。季节性用于配置新品节奏、库存与广告，而不是在淡季完全停止销售。
+
+### 风险提示与人工复核
+
+- Google Trends数值缺失意味着当前指数主要反映Sorftime的Amazon类目估算，不代表全美所有渠道的真实订单季节性。
+- 人工导出Google Trends CSV后，应使用Skill中的 `scripts/analyze_seasonality.py` 重新计算；若Google峰值与Sorftime偏离超过一个月，应下调库存激进度。
+- 上架时间是开始积累点击、转化和评论的时间，不是到仓日期；海运、入仓和平台预约需进一步前置。
+
+## 4. 美国客户画像：按购买任务而非虚构人口比例划分
 
 以下画像基于平台商品数据、评论、美国宠物行业背景、公开论坛和社交平台行为交叉推断，不是平台官方用户比例。
 
@@ -92,7 +139,7 @@ status: "final"
 - **适配产品：**复用成熟结构做 pink、flower、cactus、boho、modern wood 换肤。
 - **平台路径：**TikTok Shop 用内容验证；Temu 测图测价；Amazon / Walmart 只上验证后的款。
 
-## 4. 不同平台的人群与产品适配差异
+## 5. 不同平台的人群与产品适配差异
 
 | 平台 | 购买心智 | 最适配产品 | 建议价格 | 置信度 |
 |---|---|---|---|---|
@@ -108,7 +155,7 @@ status: "final"
 3. Temu更适合紧凑和完整功能低价款：先控制外箱、缺件和安装，再谈功能数量。
 4. TikTok Shop更适合成熟结构的视觉款，不适合用混合抓板类目数据推导 Cat Tree 市场容量。
 
-## 5. 客户需求与 Kano 模型
+## 6. 客户需求与 Kano 模型
 
 | 负评主题 | 命中次数 | 涉及评论样本 |
 |---|---:|---:|
@@ -141,7 +188,7 @@ status: "final"
 - 模块化替换件、备用玩具球、可拆洗软包。
 - 真实大猫上树、稳定性演示和安装延时视频。
 
-## 6. 最终产品开发路线
+## 7. 最终产品开发路线
 
 ### 1. P1 44-54英寸稳定型主流款（机会分 91）
 
@@ -171,7 +218,7 @@ status: "final"
 - **平台版本：**TikTok Shop / Temu先测内容和点击；验证后进入Amazon / Walmart。
 - **风险：**跟卖快、颜色SKU膨胀、实物色差和结构稳定性下降。
 
-## 7. Amazon清洗样本结构
+## 8. Amazon清洗样本结构
 
 ### 品牌 Top10
 
@@ -219,7 +266,7 @@ status: "final"
 - 4.5星及以上商品贡献 52.27% 的清洗样本月销量。
 - 清洗前100条中有2条墙装猫家具，已从品牌、卖家、价格和销量结构中剔除。
 
-## 8. Listing、图片和广告打法
+## 9. Listing、图片和广告打法
 
 ### 共用图片顺序
 
@@ -240,7 +287,7 @@ status: "final"
 - **Temu：**首图强调功能完整和价格感，但必须加入真实猫图与尺寸图，避免图片放大造成预期落差。
 - **TikTok Shop：**用猫跳上后不晃、30秒安装、沙发抓挠转移和客厅前后对比做内容；没有纯 Cat Tree 数据前只做小批验证。
 
-## 9. 风险、人工复核与立项门槛
+## 10. 风险、人工复核与立项门槛
 
 ### 风险
 
@@ -259,7 +306,7 @@ status: "final"
 5. 抓绳拉脱、软包掉毛、异味和边缘安全测试。
 6. 外箱跌落、护角和内部零件固定测试。
 
-## 10. 最终结论
+## 11. 最终结论
 
 项目部应采用“一套稳定结构平台，按平台拆成三类版本”的开发方式：
 
@@ -270,7 +317,7 @@ status: "final"
 
 不建议首批开发独立抓板、墙面踏板或75英寸以上超高塔来替代本次 Cat Tree 主线。它们属于相邻品线或高风险扩展，不计入本报告的核心选品结论。
 
-## 11. 参考来源
+## 12. 参考来源
 
 - [APPA 2026 State of the Industry](https://americanpetproducts.org/news/2026-state-of-the-industry-report)：美国宠物家庭、猫家庭增长和价值导向背景。
 - [APPA 2025 State of the Industry](https://americanpetproducts.org/news/u-s-pet-industry-reaches-152-billion-in-2024-expenditures-expected-to-surpass-157-billion-in-2025)：美国宠物行业规模及家庭拥有率背景。
@@ -279,3 +326,7 @@ status: "final"
 - [The Strategist: The Very Best Cat Trees](https://nymag.com/strategist/article/best-cat-trees-and-kitty-condos.html)：稳定、材质、摆放、墙装和真实猫使用场景的专业测评补充。
 - [Reddit r/CatAdvice: Cat tree discussion](https://www.reddit.com/r/CatAdvice/comments/1hf83ea/cat_tree/)：公开论坛的质量、稳定、尺寸和购买比较讨论，仅作定性补充。
 - [Pinterest: Cat Towers Aesthetic](https://www.pinterest.com/ideas/cat-towers-aesthetic/900296879673/)：modern wood、boho、flower、wall cat furniture等视觉方向灵感。
+- [Google Trends: cat tree / cat tower, United States, five years](https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=cat%20tree,cat%20tower&hl=en)：本轮2026年6月25日直接访问返回HTTP 429，保留精确查询链接供人工导出CSV复核。
+- [Google Trends: Understanding the data](https://newsinitiative.withgoogle.com/resources/trainings/google-trends-understanding-the-data/)：Google Trends是相对且经过抽样的搜索兴趣指标，不等同于销量或绝对搜索量。
+- [Google Trends API alpha announcement](https://developers.google.com/search/blog/2025/07/trends-api)：官方API仍为有限测试阶段；未获得访问权限时不虚构数值序列。
+- [GemPages: Cat business search-interest discussion](https://gempages.net/blogs/shopify/cat-business)：仅用于定性佐证Cat Tree年末关注增强，不参与数值指数计算。

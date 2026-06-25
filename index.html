@@ -58,7 +58,7 @@
     .section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; margin-bottom: 15px; }
     .section-head h2 { margin: 5px 0 0; font-size: 25px; }
     .section-head p { max-width: 640px; margin: 0; color: var(--muted); line-height: 1.65; }
-    .summary-grid, .metric-grid, .persona-grid, .platform-grid, .concept-grid { display: grid; gap: 14px; }
+    .summary-grid, .metric-grid, .persona-grid, .platform-grid, .concept-grid, .season-grid, .launch-grid { display: grid; gap: 14px; }
     .summary-grid { grid-template-columns: repeat(4, 1fr); }
     .summary {
       padding: 17px; border: 1px solid var(--line); border-radius: 17px; background: white; min-height: 155px;
@@ -141,10 +141,26 @@
     .source-list li { padding: 11px 12px; border: 1px solid var(--line); border-radius: 13px; background: white; }
     .source-list a { display: block; font-weight: 900; }
     .source-list span { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+    .season-grid { grid-template-columns: repeat(12, 1fr); align-items: end; }
+    .season-month { padding: 11px 8px; border: 1px solid var(--line); border-radius: 14px; background: white; text-align: center; }
+    .season-month b, .season-month strong, .season-month small { display: block; }
+    .season-month strong { margin: 8px 0; font-size: 20px; }
+    .season-month span { display: block; height: 62px; border-radius: 8px; background: #eee6d8; overflow: hidden; position: relative; }
+    .season-month span i { position: absolute; left: 0; right: 0; bottom: 0; margin: auto; height: 100%; background: var(--blue); transform-origin: bottom; }
+    .season-month small { margin-top: 7px; color: var(--muted); font-size: 10px; }
+    .season-month.peak { border-color: #d8a06d; background: #fff8ef; }
+    .season-month.peak span i { background: var(--orange); }
+    .launch-grid { grid-template-columns: repeat(3, 1fr); margin-top: 14px; }
+    .launch-card { padding: 17px; border: 1px solid var(--line); border-radius: 17px; background: white; }
+    .launch-card > span { color: var(--orange); font-size: 12px; font-weight: 900; }
+    .launch-card h3 { margin: 8px 0 12px; }
+    .launch-card p { margin: 7px 0; color: var(--muted); line-height: 1.55; font-size: 13px; }
+    .launch-card b { color: var(--ink); }
     @media (max-width: 1050px) {
       .summary-grid, .metric-grid { grid-template-columns: repeat(2, 1fr); }
       .persona-grid { grid-template-columns: repeat(2, 1fr); }
       .competitor-grid { grid-template-columns: repeat(3, 1fr); }
+      .season-grid { grid-template-columns: repeat(6, 1fr); }
     }
     @media (max-width: 760px) {
       .wrap { width: min(100% - 20px, 620px); padding-top: 12px; }
@@ -153,7 +169,8 @@
       .hero-main, .hero-side, .card { padding: 20px; }
       .section-head { display: block; }
       .section-head p { margin-top: 8px; }
-      .summary-grid, .metric-grid, .persona-grid, .downloads { grid-template-columns: 1fr; }
+      .summary-grid, .metric-grid, .persona-grid, .downloads, .launch-grid { grid-template-columns: 1fr; }
+      .season-grid { grid-template-columns: repeat(3, 1fr); }
       .direction-card { grid-template-columns: 58px 1fr; gap: 12px; }
       .score { width: 54px; height: 54px; font-size: 19px; }
       .competitor-grid { grid-template-columns: 1fr; }
@@ -171,7 +188,7 @@
 <main class="wrap">
   <nav class="nav" aria-label="报告导航">
     <a href="#summary">结论</a><a href="#scope">口径</a><a href="#market">市场</a>
-    <a href="#persona">画像</a><a href="#platform">平台差异</a><a href="#needs">需求</a>
+    <a href="#seasonality">季节</a><a href="#persona">画像</a><a href="#platform">平台差异</a><a href="#needs">需求</a>
     <a href="#competitor">竞品</a><a href="#roadmap">开发路线</a><a href="#operations">运营</a>
     <a href="#risk">风险</a><a href="#data">数据</a>
   </nav>
@@ -187,6 +204,7 @@
         <span class="badge">Walmart：40条完整Cat Tree</span>
         <span class="badge">Temu：8个ProductId逐个复核</span>
         <span class="badge">TikTok：仅渠道画像，不做销量结论</span>
+        <span class="badge">季节性：24个Sorftime完整月份，Google数值待复核</span>
       </div>
     </div>
     <aside class="hero-side">
@@ -287,6 +305,24 @@
         <br><div class="callout red"><b>不代表容易：</b>关键词主词混入大量非Cat Tree产品，新品必须以明确场景词、真实尺寸和稳定证据减少流量浪费。</div>
       </div>
     </div>
+  </section>
+
+  <section id="seasonality" class="section card">
+    <div class="section-head">
+      <div><span class="eyebrow">Seasonality & Launch</span><h2>12月主峰，7月与11月次峰；上架必须提前8—12周</h2></div>
+      <p>指数按每个自然年“月均=100”归一化后跨年平均。2026年6月为未完月，已排除。Google Trends本轮返回HTTP 429，因此当前结论置信度为中等。</p>
+    </div>
+    <div class="season-grid"><article class="season-month"><b>1月</b><strong>100.9</strong><span><i style="width:78.4%"></i></span><small>常态/淡季</small></article><article class="season-month"><b>2月</b><strong>84.6</strong><span><i style="width:65.7%"></i></span><small>常态/淡季</small></article><article class="season-month"><b>3月</b><strong>95.8</strong><span><i style="width:74.4%"></i></span><small>常态/淡季</small></article><article class="season-month"><b>4月</b><strong>87.4</strong><span><i style="width:67.9%"></i></span><small>常态/淡季</small></article><article class="season-month"><b>5月</b><strong>91.5</strong><span><i style="width:71.1%"></i></span><small>常态/淡季</small></article><article class="season-month"><b>6月</b><strong>89.7</strong><span><i style="width:69.7%"></i></span><small>常态/淡季</small></article><article class="season-month peak"><b>7月</b><strong>116.7</strong><span><i style="width:90.7%"></i></span><small>旺季</small></article><article class="season-month"><b>8月</b><strong>103.2</strong><span><i style="width:80.2%"></i></span><small>常态/淡季</small></article><article class="season-month"><b>9月</b><strong>94.0</strong><span><i style="width:73.0%"></i></span><small>常态/淡季</small></article><article class="season-month"><b>10月</b><strong>94.1</strong><span><i style="width:73.1%"></i></span><small>常态/淡季</small></article><article class="season-month peak"><b>11月</b><strong>113.4</strong><span><i style="width:88.1%"></i></span><small>旺季</small></article><article class="season-month peak"><b>12月</b><strong>128.7</strong><span><i style="width:100.0%"></i></span><small>旺季</small></article></div>
+    <div class="launch-grid"><article class="launch-card"><span>年末主峰</span><h3>12月需求峰值</h3><p><b>最佳上架：</b>2026年9月8日至2026年10月6日</p><p><b>库存就绪：</b>2026年10月20日</p><p><b>目标峰值：</b>2026年12月1日</p></article><article class="launch-card"><span>暑期次峰</span><h3>7月需求峰值</h3><p><b>最佳上架：</b>2027年4月8日至2027年5月6日</p><p><b>库存就绪：</b>2027年5月20日</p><p><b>目标峰值：</b>2027年7月1日</p></article><article class="launch-card"><span>Q4前置峰</span><h3>11月需求峰值</h3><p><b>最佳上架：</b>2026年8月9日至2026年9月6日</p><p><b>库存就绪：</b>2026年9月20日</p><p><b>目标峰值：</b>2026年11月1日</p></article></div>
+    <div class="split" style="margin-top:14px">
+      <div class="callout"><b>2026年Q4可执行：</b>成熟结构的44—54英寸主流款和60—72英寸大猫款，在2026年8月上旬至10月上旬分批上架，先承接11月，再进入12月主峰。</div>
+      <div class="callout orange"><b>净新结构建议：</b>若需要重新开模、重做包装或长周期海运，不宜仓促追2026年Q4；建议2027年4月8日至5月6日上架，承接2027年7月次峰。</div>
+    </div>
+    <div class="split" style="margin-top:14px">
+      <div class="callout"><b>关键词差异：</b><code>cat tree</code>全年较均衡；<code>cat tree tower</code>偏10—12月；<code>cat tree for large cats</code>偏9月，因此大猫款应在6—7月提前冷启动。</div>
+      <div class="callout red"><b>人工复核点：</b>打开<a href="https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=cat%20tree,cat%20tower&hl=en" target="_blank" rel="noopener">Google Trends美国区五年查询</a>导出CSV，再用Skill计算器复跑。当前不得把定性资料写成Google数值趋势。</div>
+    </div>
+    <p class="note">Sorftime销量为第三方估算，Google Trends为相对且经过抽样的搜索兴趣。两者分别反映电商成交估算与搜索关注，需结合店铺后台订单、库存周期和广告数据复核。</p>
   </section>
 
   <section id="persona" class="section card">
@@ -847,10 +883,12 @@
       <a class="download" href="reports/amazon_cat_tree_excluded_noise.csv"><b>排除噪音清单</b><span>墙装猫架/墙面踏板，便于人工审计。</span></a>
       <a class="download" href="reports/temu_cat_tree_live_8_products.csv"><b>Temu 8条完整Cat Tree</b><span>2026年6月24日ProductId逐个复核。</span></a>
       <a class="download" href="latest-pure-cat-tree-snapshot-2026-06-24.json"><b>最新数据快照</b><span>实时Amazon、Walmart快照、Temu复核和TikTok边界。</span></a>
+      <a class="download" href="latest-cat-tree-seasonality-2026-06-25.json"><b>季节性计算结果</b><span>月度指数、峰值月份、最佳上架与库存就绪日期。</span></a>
+      <a class="download" href="reports/cat-tree-sorftime-monthly-sales-2024-06_to_2026-06.csv"><b>Sorftime月度原始序列</b><span>24个完整月份，2026年6月标记为未完月并排除。</span></a>
     </div>
 
     <h3 style="margin-top:20px">公开与行业来源</h3>
-    <ul class="source-list"><li><a href="https://americanpetproducts.org/news/2026-state-of-the-industry-report" target="_blank" rel="noopener">APPA 2026 State of the Industry</a><span>美国宠物家庭、猫家庭增长和价值导向背景。</span></li><li><a href="https://americanpetproducts.org/news/u-s-pet-industry-reaches-152-billion-in-2024-expenditures-expected-to-surpass-157-billion-in-2025" target="_blank" rel="noopener">APPA 2025 State of the Industry</a><span>美国宠物行业规模及家庭拥有率背景。</span></li><li><a href="https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/" target="_blank" rel="noopener">Pew Research Center: Americans&#x27; Social Media Use 2025</a><span>TikTok、Pinterest等平台的美国成人使用差异。</span></li><li><a href="https://newsroom.tiktok.com/en-us/tiktok-shop-is-where-shoppers-come-to-discover" target="_blank" rel="noopener">TikTok Shop Newsroom 2025</a><span>内容发现、达人和购物行为的渠道定位。</span></li><li><a href="https://nymag.com/strategist/article/best-cat-trees-and-kitty-condos.html" target="_blank" rel="noopener">The Strategist: The Very Best Cat Trees</a><span>稳定、材质、摆放、墙装和真实猫使用场景的专业测评补充。</span></li><li><a href="https://www.reddit.com/r/CatAdvice/comments/1hf83ea/cat_tree/" target="_blank" rel="noopener">Reddit r/CatAdvice: Cat tree discussion</a><span>公开论坛的质量、稳定、尺寸和购买比较讨论，仅作定性补充。</span></li><li><a href="https://www.pinterest.com/ideas/cat-towers-aesthetic/900296879673/" target="_blank" rel="noopener">Pinterest: Cat Towers Aesthetic</a><span>modern wood、boho、flower、wall cat furniture等视觉方向灵感。</span></li></ul>
+    <ul class="source-list"><li><a href="https://americanpetproducts.org/news/2026-state-of-the-industry-report" target="_blank" rel="noopener">APPA 2026 State of the Industry</a><span>美国宠物家庭、猫家庭增长和价值导向背景。</span></li><li><a href="https://americanpetproducts.org/news/u-s-pet-industry-reaches-152-billion-in-2024-expenditures-expected-to-surpass-157-billion-in-2025" target="_blank" rel="noopener">APPA 2025 State of the Industry</a><span>美国宠物行业规模及家庭拥有率背景。</span></li><li><a href="https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/" target="_blank" rel="noopener">Pew Research Center: Americans&#x27; Social Media Use 2025</a><span>TikTok、Pinterest等平台的美国成人使用差异。</span></li><li><a href="https://newsroom.tiktok.com/en-us/tiktok-shop-is-where-shoppers-come-to-discover" target="_blank" rel="noopener">TikTok Shop Newsroom 2025</a><span>内容发现、达人和购物行为的渠道定位。</span></li><li><a href="https://nymag.com/strategist/article/best-cat-trees-and-kitty-condos.html" target="_blank" rel="noopener">The Strategist: The Very Best Cat Trees</a><span>稳定、材质、摆放、墙装和真实猫使用场景的专业测评补充。</span></li><li><a href="https://www.reddit.com/r/CatAdvice/comments/1hf83ea/cat_tree/" target="_blank" rel="noopener">Reddit r/CatAdvice: Cat tree discussion</a><span>公开论坛的质量、稳定、尺寸和购买比较讨论，仅作定性补充。</span></li><li><a href="https://www.pinterest.com/ideas/cat-towers-aesthetic/900296879673/" target="_blank" rel="noopener">Pinterest: Cat Towers Aesthetic</a><span>modern wood、boho、flower、wall cat furniture等视觉方向灵感。</span></li><li><a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=cat%20tree,cat%20tower&amp;hl=en" target="_blank" rel="noopener">Google Trends: cat tree / cat tower, United States, five years</a><span>本轮2026年6月25日直接访问返回HTTP 429，保留精确查询链接供人工导出CSV复核。</span></li><li><a href="https://newsinitiative.withgoogle.com/resources/trainings/google-trends-understanding-the-data/" target="_blank" rel="noopener">Google Trends: Understanding the data</a><span>Google Trends是相对且经过抽样的搜索兴趣指标，不等同于销量或绝对搜索量。</span></li><li><a href="https://developers.google.com/search/blog/2025/07/trends-api" target="_blank" rel="noopener">Google Trends API alpha announcement</a><span>官方API仍为有限测试阶段；未获得访问权限时不虚构数值序列。</span></li><li><a href="https://gempages.net/blogs/shopify/cat-business" target="_blank" rel="noopener">GemPages: Cat business search-interest discussion</a><span>仅用于定性佐证Cat Tree年末关注增强，不参与数值指数计算。</span></li></ul>
     <p class="note">说明：公开论坛和Pinterest只用于解释需求与视觉趋势，不用于计算销量、市场容量或客户占比。所有第三方销量、销售额和CPC均需结合店铺后台、供应商报价、平台费用和退货数据复核。</p>
   </section>
 </main>
