@@ -19,7 +19,7 @@ status: "final"
 - **首要方向是44-54英寸稳定型主流款，第二方向是60-72英寸大猫加强款。** 前者覆盖Amazon、Walmart与Temu的最大共同需求，后者承担Amazon高客单和Walmart大猫场景。
 - **不同平台不能用同一SKU、同一价格和同一页面打法硬推。** Amazon卖“证据与信任”，Walmart卖“家庭价值与交付便利”，Temu卖“低价完整功能”，TikTok Shop卖“真实演示与视觉内容”。
 - **美国用户最核心的不是高度，而是可用性。** 335条代表ASIN负评显示，尺寸/大猫适配、安装缺件、稳定安全、材料耐久和猫是否愿意使用，是必须优先解决的开发问题。
-- **季节性不是强单峰，但存在明确的7月与11—12月抬升。** Sorftime完整月份标准化指数显示12月128.7、7月116.7、11月113.4；2026年Q4主窗口应在8月上旬至10月上旬完成分批上架，净新结构若错过开发周期则转向2027年4—5月上架、承接7月次峰。
+- **季节性不是强单峰，7月不能写成已被多源确认的自然旺季。** Sorftime完整月份标准化指数显示12月128.7、7月116.7、11月113.4；更稳妥口径是12月主旺季、11月Q4前置峰、7月夏季/促销次峰。2026年Q4主窗口仍应在8月上旬至10月上旬完成分批上架，净新结构若错过开发周期则转向2027年4—5月上架、承接7月次峰。
 
 ## 1. 分析边界与数据可信度
 
@@ -60,9 +60,10 @@ status: "final"
 
 - Sorftime `Cat Trees` 类目采用2024年6月至2026年5月共24个完整月份；2026年6月数据未完，已排除。
 - 为降低年度规模变化干扰，每个自然年先按“全年月均=100”归一化，再按月份跨年平均。
-- 主峰为12月，指数128.7；次峰为7月116.7和11月113.4。2月84.6、4月87.4、6月89.7相对偏弱。
+- 主峰为12月，指数128.7；7月116.7和11月113.4属于次峰信号。2月84.6、4月87.4、6月89.7相对偏弱。
 - Google Trends美国区 `cat tree / cat tower` 五年查询在2026年6月25日返回HTTP 429，因此本轮没有把Google数值序列加入综合指数。公开资料只用于定性佐证年末和冬季关注增强。
 - 置信度为 **medium（中等）**：Sorftime有24个完整月份，Google Trends仅有定性佐证，不能升级为高置信度。
+- 2024年与2025年Amazon Prime Day均在7月，7月SalesCount抬升可能混入平台大促效应；2026年Prime Day已提前到6月23—26日，因此不能机械推断2026年7月仍是同等级旺季。
 
 | 月份 | Sorftime标准化指数 | 判断 |
 |---|---:|---|
@@ -72,12 +73,12 @@ status: "final"
 | 4月 | 87.4 | 常态/淡季 |
 | 5月 | 91.5 | 常态/淡季 |
 | 6月 | 89.7 | 常态/淡季 |
-| 7月 | 116.7 | 旺季 |
+| 7月 | 116.7 | 夏季次峰 |
 | 8月 | 103.2 | 常态/淡季 |
 | 9月 | 94.0 | 常态/淡季 |
 | 10月 | 94.1 | 常态/淡季 |
-| 11月 | 113.4 | 旺季 |
-| 12月 | 128.7 | 旺季 |
+| 11月 | 113.4 | Q4前置峰 |
+| 12月 | 128.7 | 主旺季 |
 
 ### 最佳上架与库存日历
 
@@ -90,13 +91,13 @@ status: "final"
 ### AI判断
 
 1. **2026年Q4主战役：**成熟结构的44—54英寸主流款、大猫加强款应在2026年8月上旬至10月上旬分批上架，先承接11月前置峰，再进入12月主峰。主链接不应等到11月才冷启动。
-2. **2027年暑期次峰：**净新结构、需要重新开模或重做包装的产品，建议2027年4月8日至5月6日上架，库存最晚2027年5月20日前就绪，承接7月次峰。
+2. **2027年暑期/促销次峰：**净新结构、需要重新开模或重做包装的产品，可把2027年4月8日至5月6日作为提前上架窗口，库存最晚2027年5月20日前就绪，但这应被视为次峰机会，不应按12月主旺季配置同等库存。
 3. **关键词差异：**Sorftime关键词季节字段显示 `cat tree tower` 更偏10—12月，`cat tree for large cats` 更偏9月；大猫款应在6—7月提前上架积累评论，普通主流款则重点准备Q4。
 4. **常青属性：**`cat tree` 主词被标记为均衡，说明全年都有需求。季节性用于配置新品节奏、库存与广告，而不是在淡季完全停止销售。
 
 ### 风险提示与人工复核
 
-- Google Trends数值缺失意味着当前指数主要反映Sorftime的Amazon类目估算，不代表全美所有渠道的真实订单季节性。
+- Google Trends数值缺失意味着当前指数主要反映Sorftime的Amazon类目估算，不代表全美所有渠道的真实订单季节性；其中7月尤其需要拆分“真实宠物用品需求”与“Prime Day大促拉动”。
 - 人工导出Google Trends CSV后，应使用Skill中的 `scripts/analyze_seasonality.py` 重新计算；若Google峰值与Sorftime偏离超过一个月，应下调库存激进度。
 - 上架时间是开始积累点击、转化和评论的时间，不是到仓日期；海运、入仓和平台预约需进一步前置。
 
@@ -330,3 +331,6 @@ status: "final"
 - [Google Trends: Understanding the data](https://newsinitiative.withgoogle.com/resources/trainings/google-trends-understanding-the-data/)：Google Trends是相对且经过抽样的搜索兴趣指标，不等同于销量或绝对搜索量。
 - [Google Trends API alpha announcement](https://developers.google.com/search/blog/2025/07/trends-api)：官方API仍为有限测试阶段；未获得访问权限时不虚构数值序列。
 - [GemPages: Cat business search-interest discussion](https://gempages.net/blogs/shopify/cat-business)：仅用于定性佐证Cat Tree年末关注增强，不参与数值指数计算。
+- [Amazon Prime Day 2026 official dates](https://www.aboutamazon.com/news/retail/amazon-prime-day-2026-date)：2026年Prime Day为6月23日至26日，说明2026年7月未必重复2024/2025的7月大促效应。
+- [Amazon Prime Day 2025 official dates](https://www.aboutamazon.com/news/retail/amazon-prime-day-2025-date)：2025年Prime Day为7月8日至11日，7月销售抬升可能混入平台大促因素。
+- [Amazon Prime Day 2024 official announcement](https://press.aboutamazon.com/2024/6/amazons-10th-prime-day-event-returns-july-16-17-with-millions-of-exclusive-deals-for-prime-members)：2024年Prime Day为7月16日至17日，7月历史销量高点需与大促影响分开解释。
