@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-08-04T05:49:59.270Z",
+  "assets": [
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/4c375b52-4d19-4a3f-8258-7fc7e285066b/dcd5e51d-7d73-4edb-ab58-7e4c3058eb04.png",
+      "filename": "image-01-light-green.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-01-light-green.png",
+      "bytes": 1904279,
+      "sha256": "18b9158697ea1f093a206207f97c3980a028ce5171340405446b52d3f3007190"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/0ba59a03-892e-4a43-91f0-55ccd32bbcf2/%E4%B8%BB%E5%9B%BE5.png",
+      "filename": "image-05.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-05.png",
+      "bytes": 1969672,
+      "sha256": "5c25deb4b8ffaa43450964fb80d7e61d71e179f0c80d604ef23cb247704a1ba2"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/a048b4c9-3b26-43ef-accb-8a8027a18103/%E4%B8%BB%E5%9B%BE7.png",
+      "filename": "image-07.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-07.png",
+      "bytes": 1739945,
+      "sha256": "eaaa592cfe7538180582c0d2511f7c5c3b8ca503470ce4684b2a7820e3e6d5c0"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/47e5b38b-78a5-4943-918d-f982d2001cc6/%E4%B8%BB%E5%9B%BE8.png",
+      "filename": "image-08.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-08.png",
+      "bytes": 1453049,
+      "sha256": "7206958577dfbbccc33052c3cb37abb9681cf47ce421441b75247c1b1c7fc322"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/a9ef5105-f4b8-48b3-a769-c2455bed4d93/%E4%B8%BB%E5%9B%BE1.png",
+      "filename": "image-01.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-01.png",
+      "bytes": 2015320,
+      "sha256": "fadd150180d6fcbacb3b78d219d9a5f13dbef820438fe8b3dbd3953703a75dcf"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/26af8d3c-6e38-4ea4-bf02-e6177dddffc2/%E4%B8%BB%E5%9B%BE2.png",
+      "filename": "image-02.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-02.png",
+      "bytes": 2226224,
+      "sha256": "12078290a2ca378523f845306eb385594e4a65e46c50d2f3907e56014fd2161a"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/f525a036-d584-4bae-a967-3050935a9abb/%E4%B8%BB%E5%9B%BE3.png",
+      "filename": "image-03.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-03.png",
+      "bytes": 2084019,
+      "sha256": "5e95632c20a7bd4768f7e9cc3ecc62840cd0fada130356186baae4fcee5f7782"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/fb383b05-cf8a-4ea7-aa15-95db1af0552c/%E4%B8%BB%E5%9B%BE4.png",
+      "filename": "image-04.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-04.png",
+      "bytes": 2062275,
+      "sha256": "8a360cf8612d36def98a1fad3a6e0fe3de7b3ac5c3bce0e74f19663df4f3f248"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/998de9e1-547c-4e77-8242-a9dd8f22a6c2/%E4%B8%BB%E5%9B%BE10.png",
+      "filename": "image-10.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-10.png",
+      "bytes": 2149625,
+      "sha256": "9aecdf0ab46c8767c268bcc946e9d2b0b1b73d1a50442ce4b153075a05828e31"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/26391f07-e873-43de-8c72-4080a82ca3d3/%E4%B8%BB%E5%9B%BE9.png",
+      "filename": "image-09.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-09.png",
+      "bytes": 1326174,
+      "sha256": "5d977bb2fc06ec4f1b5c63e8b62943dc6ab0a6a41cc7976281ce035216779911"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/56eaeadf-a10f-4c5f-bbc9-a45256b421db/%E4%B8%BB%E5%9B%BE11.png",
+      "filename": "image-11.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-11.png",
+      "bytes": 1758093,
+      "sha256": "d336ab53680b52437b6628687ab0d8dc1090b7a4246b9c538d19771963e2a74f"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/b4aedadb-d686-4f2c-b80b-966292d33347/%E4%B8%BB%E5%9B%BE12.png",
+      "filename": "image-12.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-12.png",
+      "bytes": 1949851,
+      "sha256": "b79d5ebf83ef8fac2a63368736154463686d437b6362abe88ce0a9673c13ddaa"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/13f07129-a3b9-45dc-a7b9-611119f8e9b6/%E4%B8%BB%E5%9B%BE13.png",
+      "filename": "image-13.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-13.png",
+      "bytes": 1678846,
+      "sha256": "616178c6192553c7a139dacb5a2ae6ca9a4c41d2cab2c8c225b2b9646ec617bf"
+    },
+    {
+      "sourceUrl": "http://49.232.201.50:8080/f/b0326cd3-ed95-4e14-a1af-b1b01074a27c/%E4%B8%BB%E5%9B%BE14.png",
+      "filename": "image-14.png",
+      "publicUrl": "https://wanwanneng4621-gpt.github.io/cat-tree-us-sorftime-dashboard/assets/walmart-curtains-20260804/image-14.png",
+      "bytes": 1890355,
+      "sha256": "30dddf38472cf8c16a5dab925e514c2f9b7a9ebb6bdb1a66d9bd5058a57a66cd"
+    }
+  ]
+}
