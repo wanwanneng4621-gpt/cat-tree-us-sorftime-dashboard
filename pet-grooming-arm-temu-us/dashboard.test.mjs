@@ -16,6 +16,9 @@ assert.match(html, /不是平台总容量/);
 assert.match(html, /内部压力测试/);
 assert.match(html, /USD975374/);
 assert.match(html, /Google Trends/);
+assert.match(html, /3C竞争优势闭环/);
+assert.match(html, /不做清单/);
+assert.match(html, /mp\.weixin\.qq\.com\/s\/HOP5FL7UDbFhXxLq1F5d4A/);
 assert.doesNotMatch(html, /<script[^>]+src=/i);
 assert.doesNotMatch(html, /<link[^>]+stylesheet/i);
 
