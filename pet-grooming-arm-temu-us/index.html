@@ -129,6 +129,22 @@
     .word-bank span { border: 1px solid #c9d7df; background: var(--blue-soft); color: var(--blue); border-radius: 999px; padding: 6px 10px; font-size: 12px; font-weight: 700; }
     .source-list { margin: 0; padding-left: 18px; color: var(--muted); font-size: 13px; }
     .source-list li + li { margin-top: 6px; }
+    details.patent-case { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    details.patent-case + details.patent-case { margin-top: 18px; }
+    details.patent-case > summary { cursor: pointer; list-style: none; padding: 20px; font-weight: 850; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+    details.patent-case > summary::-webkit-details-marker { display: none; }
+    details.patent-case > summary::after { content: "展开全部图页"; color: var(--teal); font-size: 12px; font-weight: 750; }
+    details.patent-case[open] > summary::after { content: "收起"; }
+    .patent-body { padding: 0 20px 22px; border-top: 1px solid var(--line); }
+    .patent-compare { display: grid; grid-template-columns: minmax(220px,.72fr) minmax(0,1.6fr); gap: 18px; margin-top: 18px; align-items: start; }
+    .patent-project { position: sticky; top: 76px; }
+    .patent-project img { display: block; width: 100%; max-height: 360px; object-fit: contain; background: #f4f5f1; border-radius: 14px; }
+    .patent-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+    .patent-gallery figure { margin: 0; min-width: 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; overflow: hidden; }
+    .patent-gallery img { display: block; width: 100%; height: 240px; object-fit: contain; background: #fafafa; }
+    .patent-gallery figcaption { padding: 8px 10px; color: var(--muted); font-size: 11px; }
+    .evidence-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0 0; }
+    .evidence-tag { border-radius: 999px; padding: 5px 9px; font-size: 11px; font-weight: 800; background: var(--blue-soft); color: var(--blue); }
     footer { border-top: 1px solid var(--line); background: #edf0ee; }
     .footer-inner { max-width: var(--content); margin: 0 auto; padding: 24px 28px 38px; color: var(--muted); font-size: 12px; }
     .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
@@ -138,6 +154,8 @@
       .timeline { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .decision-card { grid-template-columns: 1fr; }
       .product-frame, .product-frame img { min-height: 210px; height: 210px; }
+      .patent-compare { grid-template-columns: 1fr; }
+      .patent-project { position: static; }
     }
     @media (max-width: 720px) {
       .hero-inner { padding: 38px 18px 30px; }
@@ -149,6 +167,8 @@
       .card { padding: 17px; border-radius: 15px; }
       .bar-row { grid-template-columns: minmax(100px,1.2fr) minmax(100px,2fr) 52px; gap: 8px; }
       .trend-grid { overflow-x: auto; grid-template-columns: repeat(12, 45px); padding-bottom: 6px; }
+      .patent-gallery { grid-template-columns: 1fr; }
+      .patent-gallery img { height: 210px; }
       .footer-inner { padding-left: 18px; padding-right: 18px; }
     }
   </style>
@@ -159,8 +179,8 @@
     <div class="hero-inner">
       <p class="eyebrow">TEMU US · PET GROOMING ARM · 2026-08-12 SNAPSHOT</p>
       <h1>宠物美容臂与美容吊床<br>选品决策及运营打法</h1>
-      <p class="hero-copy">针对两款拟开发产品，将Amazon交叉验证、TEMU真实链接、评论需求、3C竞争优势、利润、趋势、专利与运营动作整合为一套可执行决策。</p>
-      <div class="hero-meta"><span>主平台：TEMU美国站</span><span>款2：有条件小批立项</span><span>款1：暂缓</span><span>公开静态快照</span></div>
+      <p class="hero-copy">针对两款拟开发产品，将Amazon交叉验证、TEMU真实链接、评论需求、3C竞争优势、趋势、专利逐图对比与运营动作整合为一套可执行决策。</p>
+      <div class="hero-meta"><span>主平台：TEMU美国站</span><span>款2：优先开发验证</span><span>款1：基础配置次优先</span><span>公开静态快照</span></div>
     </div>
   </header>
 
@@ -174,18 +194,18 @@
   <main id="content">
     <section class="panel" id="decision" role="tabpanel" aria-labelledby="tab-decision">
       <section class="section">
-        <div class="section-head"><div><h2>立项结论</h2><p class="section-note">70分及以上只代表满足前置条件后可试单，不代表爆品或盈利保证。</p></div></div>
+        <div class="section-head"><div><h2>立项结论</h2><p class="section-note">机会分只评价市场、用户、竞对、差异化和执行条件，不测试利润率，也不建议采购或补货数量。</p></div></div>
         <div class="grid grid-2">
           <article class="card decision-card">
             <div class="product-frame"><img src="assets/concept-basic-kit.png" alt="款1固定带与安全带产品图"></div>
-            <div><span class="status hold">暂缓下单</span><div class="score">56<small>/100</small></div><h3>款1：固定带 + 安全带</h3><ul><li>当前压力场景利润率约 -6.47%</li><li>同质化强，TEMU已有直接低价竞品</li><li>结算价达到$16.11后再测试20件</li></ul></div>
+            <div><span class="status hold">基础配置·次优先</span><div class="score">58<small>/100</small></div><h3>款1：固定带 + 安全带</h3><ul><li>结构成熟、执行风险相对低</li><li>同质化强，TEMU已有直接低价竞品</li><li>适合作为Basic Kit与款2形成配置对照</li></ul></div>
           </article>
           <article class="card decision-card">
             <div class="product-frame"><img src="assets/concept-hammock-kit.png" alt="款2固定带安全带与吊床产品图"></div>
-            <div><span class="status go">有条件小批立项</span><div class="score">70<small>/100</small></div><h3>款2：双带 + 吊床</h3><ul><li>压力场景利润率约 10.61%</li><li>Amazon带吊床组合需求证据更强</li><li>专利、安全和尺码过闸后首批50件</li></ul></div>
+            <div><span class="status go">优先开发验证</span><div class="score">71<small>/100</small></div><h3>款2：双带 + 吊床</h3><ul><li>Amazon带吊床组合需求证据更强</li><li>覆盖固定、剪甲和体位支撑任务</li><li>专利、安全和尺码验证必须先完成</li></ul></div>
           </article>
         </div>
-        <div class="callout" style="margin-top:16px"><strong>建议产品结构：</strong>同一美容臂主体设置`Basic Kit`引流套餐和`Hammock Kit`主推套餐。款1不单独承担主推目标，款2负责差异化和利润承接。</div>
+        <div class="callout" style="margin-top:16px"><strong>建议产品结构：</strong>同一美容臂主体设置<code>Basic Kit</code>基础配置和<code>Hammock Kit</code>主推验证配置。利润、采购数量、补货数量和最终商业审批由项目团队人工完成。</div>
       </section>
 
       <section class="section">
@@ -212,9 +232,9 @@
           <h3 class="chart-title">机会评分</h3><p class="chart-sub">固定五项权重，总分100</p>
           <div class="bars">
             <div class="bar-row"><span class="bar-label">款1需求证据</span><div class="bar-track"><div class="bar-fill" style="width:64%"></div></div><span class="bar-value">16/25</span></div>
-            <div class="bar-row"><span class="bar-label">款1价格适配</span><div class="bar-track"><div class="bar-fill orange" style="width:35%"></div></div><span class="bar-value">7/20</span></div>
+            <div class="bar-row"><span class="bar-label">款1需求匹配</span><div class="bar-track"><div class="bar-fill orange" style="width:65%"></div></div><span class="bar-value">13/20</span></div>
             <div class="bar-row"><span class="bar-label">款2需求证据</span><div class="bar-track"><div class="bar-fill teal" style="width:76%"></div></div><span class="bar-value">19/25</span></div>
-            <div class="bar-row"><span class="bar-label">款2价格适配</span><div class="bar-track"><div class="bar-fill teal" style="width:75%"></div></div><span class="bar-value">15/20</span></div>
+            <div class="bar-row"><span class="bar-label">款2需求匹配</span><div class="bar-track"><div class="bar-fill teal" style="width:80%"></div></div><span class="bar-value">16/20</span></div>
           </div>
         </article>
       </section>
@@ -229,24 +249,12 @@
       </section>
 
       <section class="section">
-        <div class="section-head"><div><h2>利润与立项红线</h2><p class="section-note">售价和结算价需由项目人工复核；广告3%与仓储1%为压力测试预留。</p></div></div>
-        <div class="table-wrap"><table><thead><tr><th>项目</th><th class="num">款1</th><th class="num">款2</th></tr></thead><tbody>
-          <tr><td>预估结算供货价</td><td class="num">$13.72</td><td class="num">$18.12</td></tr>
-          <tr><td>采购+头程+尾程成本</td><td class="num">$13.373</td><td class="num">$14.567</td></tr>
-          <tr><td>扣5%售后后的利润率</td><td class="num" style="color:var(--red)">-2.47%</td><td class="num">14.61%</td></tr>
-          <tr><td>再预留3%广告+1%仓储</td><td class="num" style="color:var(--red)">-6.47%</td><td class="num" style="color:var(--teal)">10.61%</td></tr>
-          <tr><td>达到8%利润所需最低供货价</td><td class="num">$16.11</td><td class="num">$17.55</td></tr>
-        </tbody></table></div>
-        <div class="callout" style="margin-top:14px"><strong>款1关键问题：</strong>工作簿疑似计入$2.50平台补贴。买手或结算规则未书面确认前，不得将补贴计入立项利润。</div>
-      </section>
-
-      <section class="section">
         <div class="section-head"><div><h2>季节性与上架窗口</h2><p class="section-note">Google Trends美国过去5年，使用dog grooming table作为代理词；精确美容臂词搜索量过低。</p></div><a href="https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=dog%20grooming%20arm,dog%20grooming%20table,pet%20grooming%20arm" target="_blank" rel="noopener">核验Google Trends</a></div>
         <article class="card chart-card">
           <div class="trend-grid" aria-label="2022至2025完整年度月均趋势指数">
             <div class="month"><b>20.5</b><i style="height:82%"></i><span>1月</span></div><div class="month"><b>19.8</b><i style="height:79%"></i><span>2月</span></div><div class="month"><b>19.8</b><i style="height:79%"></i><span>3月</span></div><div class="month"><b>19.5</b><i style="height:78%"></i><span>4月</span></div><div class="month"><b>17.5</b><i style="height:70%"></i><span>5月</span></div><div class="month"><b>18.8</b><i style="height:75%"></i><span>6月</span></div><div class="month"><b>20.4</b><i style="height:82%"></i><span>7月</span></div><div class="month"><b>18.8</b><i style="height:75%"></i><span>8月</span></div><div class="month low"><b>16.6</b><i style="height:66%"></i><span>9月</span></div><div class="month low"><b>14.8</b><i style="height:59%"></i><span>10月</span></div><div class="month"><b>20.4</b><i style="height:82%"></i><span>11月</span></div><div class="month"><b>18.9</b><i style="height:76%"></i><span>12月</span></div>
           </div>
-          <p class="section-note">结论：弱到中等季节性。8-9月适合小批测试与页面优化，9-10月需求偏弱，11月回升；核心补货准备应放在1-3月前。</p>
+          <p class="section-note">结论：弱到中等季节性。8-9月适合完成样品与页面验证，9-10月需求偏弱，11月回升；备货窗口由项目团队结合人工财务与供应链计划审核。</p>
         </article>
       </section>
 
@@ -275,7 +283,7 @@
         <div class="grid grid-3">
           <article class="card"><h3>用户 × 我们：值不值得做</h3><p class="section-note"><strong>目标任务：</strong>美国小型犬/猫家庭用户，在普通桌面完成剪甲和基础美容，不购买整张美容桌。</p><p class="section-note"><strong>待验证：</strong>用户是否愿意为分码吊床、安全测试和更清晰的适配说明付费。</p></article>
           <article class="card"><h3>用户 × 竞品：为什么会换</h3><p class="section-note">低价基础臂省钱、省空间，但夹具滑动、尺寸不清、缺件、杆体偏斜和吊床逃脱风险反复出现。换购触发点应是“适配更明确、使用风险更低”，不是多送几个配件。</p></article>
-          <article class="card"><h3>我们 × 竞品：如何做得不同</h3><p class="section-note">双带+吊床容易复制。真正要建立的是S/M尺码、P0测试证据、编号质检、安装内容和售后按批次回流组成的交付系统；目前仍待首批验证。</p></article>
+          <article class="card"><h3>我们 × 竞品：如何做得不同</h3><p class="section-note">双带+吊床容易复制。真正要建立的是S/M尺码、P0测试证据、编号质检、安装内容和售后按批次回流组成的交付系统；目前仍待样品与上线验证。</p></article>
         </div>
         <div class="table-wrap" style="margin-top:16px"><table><thead><tr><th>战略输出</th><th>本项目选择</th></tr></thead><tbody>
           <tr><td>目标市场</td><td>TEMU美国站预算敏感、空间有限的家庭DIY小型宠物用户</td></tr>
@@ -284,27 +292,94 @@
           <tr><td>能力系统</td><td>规格标准化 → P0测试 → S/M分码 → 编号质检 → 内容证明 → 售后回流</td></tr>
           <tr><td>不做清单</td><td>不服务强挣扎大犬/专业重载；不做单尺码；不打最低价；不做未验证承诺</td></tr>
         </tbody></table></div>
-        <div class="callout" style="margin-top:16px"><strong>结论不变：</strong>3C分析没有新增销量数据，因此款1仍为56分、款2仍为70分，首批仍限50件。它强化的是款2的产品定义和取舍，不提高市场数据置信度。</div>
-      </section>
-
-      <section class="section grid grid-2">
-        <article class="card"><h3>下单前五个硬门槛</h3><ol class="gate-list" style="margin-top:16px"><li>款2实际营业利润率仍不低于8%。</li><li>夹具、杆体、绑带、吊床和配件齐套测试全部通过。</li><li>款2完成吊床外观和约束结构FTO复核。</li><li>确认包装、毛重、桌厚、横臂、承重和吊床尺码。</li><li>买手确认类目、结算价、变体结构与安全警示要求。</li></ol></article>
-        <article class="card"><h3>专利与合规</h3><ul class="source-list" style="margin-top:14px"><li><a href="https://patents.justia.com/patent/D975374" target="_blank" rel="noopener">USD975374 Pet hammock</a>：款2外观初筛中高风险，需官方视图逐项对比。</li><li><a href="https://patents.justia.com/patent/12193409" target="_blank" rel="noopener">US12193409 Pet grooming restraining device</a>：约束带连接结构需权利要求对照。</li><li><a href="https://patents.google.com/patent/US20240188537A1/en" target="_blank" rel="noopener">US20240188537A1 Safety Tether</a>：申请中，关注双带、环扣与缝制组合。</li><li><a href="https://www.cpsc.gov/Regulations-Laws--Standards/Unregulated-Products" target="_blank" rel="noopener">CPSC未特别监管产品说明</a>：仍承担缺陷与危险产品报告责任。</li></ul></article>
+        <div class="callout" style="margin-top:16px"><strong>评分结论：</strong>款1为58分、款2为71分。3C强化款2的产品定义和取舍，但不提高市场数据置信度；人工继续负责财务、采购与备货审批。</div>
       </section>
 
       <section class="section">
-        <div class="section-head"><div><h2>首批、补货与止损</h2></div></div>
-        <div class="grid grid-4">
-          <div class="card metric"><div class="metric-label">款2首批</div><div class="metric-value">50件</div><div class="metric-detail">仅在五个硬门槛全部通过后</div></div>
-          <div class="card metric"><div class="metric-label">款1首批</div><div class="metric-value">0件</div><div class="metric-detail">利润修复后再测试20件</div></div>
-          <div class="card metric"><div class="metric-label">14天补货门槛</div><div class="metric-value">≥3单/天</div><div class="metric-detail">累计≥42件、售后≤5%、利润≥8%</div></div>
-          <div class="card metric"><div class="metric-label">止损门槛</div><div class="metric-value">售后&gt;8%</div><div class="metric-detail">或21天利润&lt;5%、评分&lt;4.2</div></div>
-        </div>
+        <div class="section-head"><div><h2>美国专利逐图与权利要求对比</h2><p class="section-note">官方图页共19张，均可点击放大。外观专利按全部视图的整体视觉印象比较；实用专利按独立权利要求逐要素映射。项目图分辨率有限，隐藏结构标记为“未知”。</p></div></div>
+
+        <details class="patent-case" open>
+          <summary><span>USD975374S1 · Pet hammock · 有效外观专利</span><span class="status go">初筛低至中</span></summary>
+          <div class="patent-body">
+            <p class="section-note"><a href="https://patents.google.com/patent/USD975374S1/en" target="_blank" rel="noopener">官方专利页</a>。专利图是弧形/背心式主体、中央两处腿孔、侧向环带和上部肩带/扣具；我方款2当前可见为近矩形四腿悬吊片。整体轮廓、孔位与悬挂方式均有明显差异，旧版“中高”结论已修正。</p>
+            <div class="evidence-tags"><span class="evidence-tag">整体轮廓：不同</span><span class="evidence-tag">开孔数量/位置：不同</span><span class="evidence-tag">上部肩带：未见</span><span class="evidence-tag">量产六视图：待补</span></div>
+            <div class="patent-compare">
+              <aside class="patent-project"><h3>我方款2对照图</h3><img src="assets/concept-hammock-kit.png" alt="我方款2固定带安全带与四腿吊床产品图"><p class="section-note">当前图：近矩形吊床、可见四腿孔。隐藏扣件与背面结构无法判断。</p></aside>
+              <div class="patent-gallery">
+                <figure><a href="assets/patents/USD975374S1-sheet-01.png" target="_blank"><img src="assets/patents/USD975374S1-sheet-01.png" alt="USD975374S1官方图页1"></a><figcaption>图页1</figcaption></figure>
+                <figure><a href="assets/patents/USD975374S1-sheet-02.png" target="_blank"><img src="assets/patents/USD975374S1-sheet-02.png" alt="USD975374S1官方图页2"></a><figcaption>图页2</figcaption></figure>
+                <figure><a href="assets/patents/USD975374S1-sheet-03.png" target="_blank"><img src="assets/patents/USD975374S1-sheet-03.png" alt="USD975374S1官方图页3"></a><figcaption>图页3</figcaption></figure>
+                <figure><a href="assets/patents/USD975374S1-sheet-04.png" target="_blank"><img src="assets/patents/USD975374S1-sheet-04.png" alt="USD975374S1官方图页4"></a><figcaption>图页4</figcaption></figure>
+                <figure><a href="assets/patents/USD975374S1-sheet-05.png" target="_blank"><img src="assets/patents/USD975374S1-sheet-05.png" alt="USD975374S1官方图页5"></a><figcaption>图页5</figcaption></figure>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="patent-case">
+          <summary><span>US12193409B1 · Pet grooming restraining device · 有效实用专利</span><span class="status hold">中风险待核</span></summary>
+          <div class="patent-body">
+            <p class="section-note"><a href="https://patents.google.com/patent/US12193409B1/en" target="_blank" rel="noopener">官方专利页</a>。独立权利要求1要求柔性带、连接单元、两端带子、位于两端之间并固定的bolt snap，以及指定首尾连接关系。当前图只能确认存在带状约束件，隐藏连接顺序无法确认。</p>
+            <div class="table-wrap" style="margin-top:14px"><table><thead><tr><th>必要要素</th><th>我方当前图</th><th>状态</th></tr></thead><tbody><tr><td>柔性托带/宽带</td><td>形态不清</td><td>未知</td></tr><tr><td>连接单元</td><td>无法识别</td><td>未知</td></tr><tr><td>两端带子</td><td>可见带状约束件</td><td>可见</td></tr><tr><td>bolt snap位于两端之间</td><td>位置不清</td><td>未知</td></tr><tr><td>指定首尾连接顺序</td><td>隐藏结构</td><td>未知</td></tr></tbody></table></div>
+            <div class="patent-compare">
+              <aside class="patent-project"><h3>我方两款带件对照图</h3><img src="assets/concept-basic-kit.png" alt="我方款1固定带与安全带产品图"><p class="section-note">需补充固定带展开正反面、全部扣件和缝线连接图。</p></aside>
+              <div class="patent-gallery">
+                <figure><a href="assets/patents/US12193409B1-sheet-01.png" target="_blank"><img src="assets/patents/US12193409B1-sheet-01.png" alt="US12193409B1官方图页1"></a><figcaption>图页1</figcaption></figure>
+                <figure><a href="assets/patents/US12193409B1-sheet-02.png" target="_blank"><img src="assets/patents/US12193409B1-sheet-02.png" alt="US12193409B1官方图页2"></a><figcaption>图页2</figcaption></figure>
+                <figure><a href="assets/patents/US12193409B1-sheet-03.png" target="_blank"><img src="assets/patents/US12193409B1-sheet-03.png" alt="US12193409B1官方图页3"></a><figcaption>图页3</figcaption></figure>
+                <figure><a href="assets/patents/US12193409B1-sheet-04.png" target="_blank"><img src="assets/patents/US12193409B1-sheet-04.png" alt="US12193409B1官方图页4"></a><figcaption>图页4</figcaption></figure>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="patent-case">
+          <summary><span>US20240188537A1 · Grooming safety tether · 待审申请</span><span class="status hold">中高待核</span></summary>
+          <div class="patent-body">
+            <p class="section-note"><a href="https://patents.google.com/patent/US20240188537A1/en" target="_blank" rel="noopener">官方专利页</a>。这是与固定/安全带最相关的申请。独立权利要求覆盖第一带、第二带与扣件，其他独立权利要求进一步加入环带、安装到美容臂和颈部美容环；申请中的权利要求仍可能变化。</p>
+            <div class="table-wrap" style="margin-top:14px"><table><thead><tr><th>关键结构</th><th>我方当前图</th><th>状态</th></tr></thead><tbody><tr><td>第一带安装到美容臂</td><td>可见带件连接杆体</td><td>可见</td></tr><tr><td>第二带连接第一带</td><td>连接方式不清</td><td>未知</td></tr><tr><td>ring band / 环带</td><td>无法识别</td><td>未知</td></tr><tr><td>snap fastener / 快挂扣</td><td>有挂接件但型号不清</td><td>未知</td></tr><tr><td>camlock与box stitch</td><td>无法识别</td><td>未知</td></tr><tr><td>颈部环及指定连接链</td><td>完整链路不清</td><td>未知</td></tr></tbody></table></div>
+            <div class="patent-compare">
+              <aside class="patent-project"><h3>我方款2带件对照图</h3><img src="assets/concept-hammock-kit.png" alt="我方款2安全带固定带与吊床产品图"><p class="section-note">开发端应避免直接复刻官方图中的环带、camlock、快挂扣、box stitch及连接顺序组合。</p></aside>
+              <div class="patent-gallery">
+                <figure><a href="assets/patents/US20240188537A1-sheet-01.png" target="_blank"><img src="assets/patents/US20240188537A1-sheet-01.png" alt="US20240188537A1官方图页1"></a><figcaption>图页1</figcaption></figure>
+                <figure><a href="assets/patents/US20240188537A1-sheet-02.png" target="_blank"><img src="assets/patents/US20240188537A1-sheet-02.png" alt="US20240188537A1官方图页2"></a><figcaption>图页2</figcaption></figure>
+                <figure><a href="assets/patents/US20240188537A1-sheet-03.png" target="_blank"><img src="assets/patents/US20240188537A1-sheet-03.png" alt="US20240188537A1官方图页3"></a><figcaption>图页3</figcaption></figure>
+                <figure><a href="assets/patents/US20240188537A1-sheet-04.png" target="_blank"><img src="assets/patents/US20240188537A1-sheet-04.png" alt="US20240188537A1官方图页4"></a><figcaption>图页4</figcaption></figure>
+                <figure><a href="assets/patents/US20240188537A1-sheet-05.png" target="_blank"><img src="assets/patents/US20240188537A1-sheet-05.png" alt="US20240188537A1官方图页5"></a><figcaption>图页5</figcaption></figure>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="patent-case">
+          <summary><span>US10986815B2 · Dog grooming clamp · 有效实用专利</span><span class="status go">初筛低</span></summary>
+          <div class="patent-body">
+            <p class="section-note"><a href="https://patents.google.com/patent/US10986815B2/en" target="_blank" rel="noopener">官方专利页</a>。核心是安装在美容杆上的夹具、内部绳道及枢转手柄/销锁绳机构。当前项目图显示桌边夹具支撑立杆，未见内部绳道和枢转锁绳手柄。</p>
+            <div class="table-wrap" style="margin-top:14px"><table><thead><tr><th>关键要素</th><th>我方当前图</th><th>状态</th></tr></thead><tbody><tr><td>夹具安装到美容杆</td><td>外观关系需看实物</td><td>未知</td></tr><tr><td>夹具内部绳道</td><td>未显示</td><td>未见</td></tr><tr><td>枢转手柄/销锁绳</td><td>未显示</td><td>未见</td></tr><tr><td>快速锁定/释放绳索</td><td>未显示此功能</td><td>未见</td></tr></tbody></table></div>
+            <div class="patent-compare">
+              <aside class="patent-project"><h3>我方夹具对照图</h3><img src="assets/concept-basic-kit.png" alt="我方美容臂桌边夹具产品图"><p class="section-note">若供应商夹具内部另有锁绳结构，需拆解后重新判断。</p></aside>
+              <div class="patent-gallery">
+                <figure><a href="assets/patents/US10986815B2-sheet-01.png" target="_blank"><img src="assets/patents/US10986815B2-sheet-01.png" alt="US10986815B2官方图页1"></a><figcaption>图页1</figcaption></figure>
+                <figure><a href="assets/patents/US10986815B2-sheet-02.png" target="_blank"><img src="assets/patents/US10986815B2-sheet-02.png" alt="US10986815B2官方图页2"></a><figcaption>图页2</figcaption></figure>
+                <figure><a href="assets/patents/US10986815B2-sheet-03.png" target="_blank"><img src="assets/patents/US10986815B2-sheet-03.png" alt="US10986815B2官方图页3"></a><figcaption>图页3</figcaption></figure>
+                <figure><a href="assets/patents/US10986815B2-sheet-04.png" target="_blank"><img src="assets/patents/US10986815B2-sheet-04.png" alt="US10986815B2官方图页4"></a><figcaption>图页4</figcaption></figure>
+                <figure><a href="assets/patents/US10986815B2-sheet-05.png" target="_blank"><img src="assets/patents/US10986815B2-sheet-05.png" alt="US10986815B2官方图页5"></a><figcaption>图页5</figcaption></figure>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <div class="callout" style="margin-top:18px"><strong>下一步：</strong>补齐量产六视图、固定带正反面、扣件与缝线特写、夹具拆解图，再由美国专利律师基于量产结构完成FTO。本模块是研发筛查，不构成法律意见。</div>
+      </section>
+
+      <section class="section grid grid-2">
+        <article class="card"><h3>进入开发验证前五个硬门槛</h3><ol class="gate-list" style="margin-top:16px"><li>夹具、杆体、绑带、吊床和配件齐套测试全部通过。</li><li>四组专利完成逐图/逐要素FTO复核。</li><li>确认包装、毛重、桌厚、横臂、承重和吊床尺码。</li><li>买手确认类目、变体结构与安全警示要求。</li><li>Listing全部产品承诺可由规格或测试证据支持。</li></ol></article>
+        <article class="card"><h3>美国合规边界</h3><ul class="source-list" style="margin-top:14px"><li><a href="https://www.cpsc.gov/Regulations-Laws--Standards/Unregulated-Products" target="_blank" rel="noopener">CPSC未特别监管产品说明</a>：即使无专属强制标准，企业仍承担缺陷与危险产品报告责任。</li><li>按适用材料和涂层筛查铅、镉、邻苯、尖锐边缘与耐腐蚀风险。</li><li>产品和包装使用清晰、耐久的原产国标识。</li><li>安全事件必须立即停售并追溯批次。</li></ul></article>
       </section>
 
       <section class="section card">
         <h3>证据边界</h3>
-        <ul class="source-list" style="margin-top:12px"><li>Amazon销量、销售额与配置结构来自用户工作簿中的第三方估算快照。</li><li>TEMU严格匹配样本只有3条，596件是可观察月销字段之和，不是平台总容量。</li><li>Google Trends使用上位词代理，只判断方向与窗口，不计算市场销售规模。</li><li>3C文章仅提供方法框架；本项目关系判断仍以工作簿、链接、评论和测试门槛为依据。</li><li>广告3%、仓储1%、2.5倍静载、1,000次循环等属于内部压力测试或验收建议。</li><li>专利部分为初筛，不构成美国律师法律意见。</li></ul>
+        <ul class="source-list" style="margin-top:12px"><li>Amazon销量、销售额与配置结构来自用户工作簿中的第三方估算快照。</li><li>TEMU严格匹配样本只有3条，596件是可观察月销字段之和，不是平台总容量。</li><li>Google Trends使用上位词代理，只判断方向与窗口，不计算市场销售规模。</li><li>3C文章仅提供方法框架；本项目关系判断仍以工作簿、链接、评论和测试门槛为依据。</li><li>2.5倍静载、1,000次循环等属于内部验收建议，不是法定标准。</li><li>专利部分为研发初筛，不构成美国律师法律意见；待审申请的权利要求可能变化。</li></ul>
       </section>
     </section>
 
@@ -312,7 +387,7 @@
       <section class="section">
         <div class="section-head"><div><h2>运营总策略</h2><p class="section-note">选品结论和运营动作分开管理。运营的首要任务不是放大流量，而是验证款2是否真正解决稳定、尺码与安装问题。</p></div></div>
         <div class="grid grid-2">
-          <article class="card"><span class="status hold">引流套餐</span><h3 style="margin-top:12px">Basic Kit</h3><p class="section-note">美容臂 + 颈部安全带 + 腹部固定带。只有利润修复后才上架，承担低门槛价格锚点和套餐对照，不承担主推目标。</p></article>
+          <article class="card"><span class="status hold">基础配置</span><h3 style="margin-top:12px">Basic Kit</h3><p class="section-note">美容臂 + 颈部安全带 + 腹部固定带。承担基础约束场景和套餐对照，不作为差异化主推方向。</p></article>
           <article class="card"><span class="status go">主推套餐</span><h3 style="margin-top:12px">Hammock Kit</h3><p class="section-note">美容臂 + 双带 + 分码吊床。核心场景是小型犬/猫剪甲和基础美容，用安全证据、尺码准确和易安装形成转化。</p></article>
         </div>
       </section>
@@ -352,25 +427,25 @@
       <section class="section">
         <div class="section-head"><div><h2>新品上架节奏</h2><p class="section-note">8-9月完成测试与页面优化，为11月至次年3月的放量窗口做准备。</p></div></div>
         <div class="timeline">
-          <article class="card phase"><time>上架前</time><h3>证据与素材齐套</h3><p>确认结算价、FTO、安全测试、尺码表、配件清单、安装视频和警示文案。</p></article>
+          <article class="card phase"><time>上架前</time><h3>证据与素材齐套</h3><p>确认FTO、安全测试、尺码表、配件清单、安装视频和警示文案。</p></article>
           <article class="card phase"><time>0-48小时</time><h3>页面可理解性</h3><p>检查搜索收录、曝光、主图点击、咨询问题和买手反馈；先修页面误解。</p></article>
           <article class="card phase"><time>第3-7天</time><h3>第一轮验证</h3><p>观察日销、加购、转化、退款原因；重点记录桌厚、吊床尺码和安装问题。</p></article>
-          <article class="card phase"><time>第8-14天</time><h3>补货决策</h3><p>累计成交≥42件、售后≤5%、无安全投诉且利润≥8%，才补100-150件。</p></article>
+          <article class="card phase"><time>第8-14天</time><h3>产品与页面复盘</h3><p>复核点击、转化、售后、尺寸咨询和安全事件，判断继续验证、调整产品或停止。</p></article>
         </div>
       </section>
 
       <section class="section grid grid-2">
-        <article class="card"><h3>继续与放大</h3><ul class="checklist"><li>14天日均销量≥3单。</li><li>售后率≤5%，无夹具滑脱或绑带断裂。</li><li>实际营业利润率≥8%。</li><li>评分≥4.5，尺码咨询可被页面有效解决。</li><li>满足后补货100-150件，并为11月至次年3月滚动准备。</li></ul></article>
-        <article class="card"><h3>调整与停止</h3><ul class="checklist"><li>稳定曝光14天后日均&lt;1，停止补货，先修产品或页面。</li><li>21天售后&gt;8%、评分&lt;4.2或利润&lt;5%，停止扩单。</li><li>吊床尺码成为主要售后，暂停单尺码，改S/M后重测。</li><li>出现滑脱、断裂、跌落或明显伤桌，立即停售并追溯批次。</li></ul></article>
+        <article class="card"><h3>继续验证与放大流量</h3><ul class="checklist"><li>点击、加购和转化达到同店同层级新品可接受水平。</li><li>售后率≤5%，无夹具滑脱或绑带断裂。</li><li>评分≥4.5，尺码咨询可被页面有效解决。</li><li>用户反馈能验证“适配明确、风险更低”的核心买点。</li><li>备货数量由项目团队人工审核。</li></ul></article>
+        <article class="card"><h3>调整与停止</h3><ul class="checklist"><li>稳定曝光14天后点击和转化持续显著偏弱，暂停放量，先修产品或页面。</li><li>21天售后&gt;8%或评分&lt;4.2，暂停扩大流量并复核产品定义。</li><li>吊床尺码成为主要售后，暂停单尺码，改S/M后重测。</li><li>出现滑脱、断裂、跌落或明显伤桌，立即停售并追溯批次。</li></ul></article>
       </section>
 
       <section class="section">
         <div class="section-head"><div><h2>运营动作责任表</h2></div></div>
         <div class="table-wrap"><table><thead><tr><th>角色</th><th>上架前</th><th>上线后</th><th>决策输出</th></tr></thead><tbody>
-          <tr><td>产品供应端</td><td>P0测试、规格、包装、FTO、交期</td><td>追踪质量与补货周期</td><td>是否具备补单条件</td></tr>
-          <tr><td>运营端</td><td>Listing、素材、关键词、价格与买手对齐</td><td>记录曝光、点击、转化、售后和评价</td><td>继续、调整或停止</td></tr>
-          <tr><td>财务</td><td>确认结算价及完整费用</td><td>复核实际营业利润</td><td>是否达到8%利润红线</td></tr>
-          <tr><td>项目经理</td><td>确认立项硬门槛</td><td>主持14天与30天复盘</td><td>补货100-150件或止损</td></tr>
+          <tr><td>产品供应端</td><td>P0测试、规格、包装、FTO、交期</td><td>追踪质量、批次和结构问题</td><td>继续验证、改样或停止</td></tr>
+          <tr><td>运营端</td><td>Listing、素材、关键词与买手对齐</td><td>记录曝光、点击、转化、售后和评价</td><td>继续、调整或停止流量</td></tr>
+          <tr><td>知识产权/合规</td><td>专利逐图、权利要求、警示与标签复核</td><td>跟踪待审专利状态和安全事件</td><td>放行、修改或停售</td></tr>
+          <tr><td>项目经理</td><td>确认开发验证硬门槛</td><td>主持14天与30天复盘</td><td>汇总证据供人工商业审批</td></tr>
         </tbody></table></div>
       </section>
     </section>
